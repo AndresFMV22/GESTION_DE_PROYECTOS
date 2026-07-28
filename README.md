@@ -152,7 +152,7 @@ PORT=3000
 ### 4. Crear las tablas en Supabase
 
 1. Ir a [Supabase Dashboard](https://supabase.com/dashboard)
-2. Seleccionar el proyecto `nqywjpaomprykthcbsqn`
+2. Seleccionar tu proyecto
 3. Ir a **SQL Editor**
 4. Pegar el contenido de `backend/supabase-schema.sql` y ejecutar
 5. Pegar el contenido de `backend/fix-rls.sql` y ejecutar (deshabilita RLS)
