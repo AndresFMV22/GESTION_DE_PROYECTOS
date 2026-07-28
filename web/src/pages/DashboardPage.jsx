@@ -164,7 +164,7 @@ export default function DashboardPage() {
 
       const freeInactive = modulesData.filter(m => !m.is_premium && !m.user_has_module);
       for (const m of freeInactive) {
-        await api.modules.toggle(m.id);
+        try { await api.modules.toggle(m.id); } catch (e) { console.error('Toggle error:', e); }
       }
 
       const [upcomingData, refreshedModules] = await Promise.all([
@@ -323,31 +323,14 @@ export default function DashboardPage() {
               <p style={{ fontSize: 14, opacity: 0.6 }}>Activa un modulo y crea tu primer recordatorio!</p>
             </div>
           ) : (
-            Object.entries(groupedReminders).map(([slug, reminders]) => {
-              const colors = MODULE_COLORS[slug] || MODULE_COLORS.general;
-              const modData = modules.find(m => m.slug === slug);
-              const displayName = modData?.name || slug.charAt(0).toUpperCase() + slug.slice(1);
-              return (
-                <div key={slug} className="reminder-group">
-                  <div className="reminder-group-header" style={{ borderLeftColor: colors.solid }}>
-                    <div style={{ width: 28, height: 28, borderRadius: 8, background: colors.bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      {MODULE_ICONS_SVG[slug]?.('#fff', 16)}
-                    </div>
-                    <span style={{ fontWeight: 600, color: '#fff', fontSize: 14 }}>
-                      {displayName}
-                    </span>
-                    <span style={{ fontSize: 12, color: '#6b7280', marginLeft: 'auto' }}>
-                      {reminders.length} recordatorio{reminders.length !== 1 ? 's' : ''}
-                    </span>
-                  </div>
-                  <div className="reminder-grid">
-                    {reminders.map(r => (
-                      <ReminderCard key={r.id} reminder={r} onUpdate={loadData} moduleColor={colors} />
-                    ))}
-                  </div>
-                </div>
-              );
-            })
+            <div className="reminder-grid">
+              {upcoming.map(r => {
+                const colors = MODULE_COLORS[r.module_slug] || MODULE_COLORS.general;
+                return (
+                  <ReminderCard key={r.id} reminder={r} onUpdate={loadData} moduleColor={colors} />
+                );
+              })}
+            </div>
           )}
         </div>
         {showModulePicker && (

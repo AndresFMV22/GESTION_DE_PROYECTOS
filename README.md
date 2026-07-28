@@ -121,7 +121,7 @@ vida-adulto-app/
 
 - **Node.js** v18 o superior
 - **npm** v9 o superior
-- Cuenta en [Supabase](https://supabase.com) (ya configurada con el proyecto `nqywjpaomprykthcbsqn`)
+- Cuenta en [Supabase](https://supabase.com)
 
 ### 1. Clonar el repositorio
 
@@ -139,13 +139,13 @@ npm install
 
 ### 3. Configurar variables de entorno del backend
 
-El archivo `backend/.env` ya viene configurado. Contiene:
+Crear el archivo `backend/.env` basado en `.env.example`:
 
 ```env
-SUPABASE_URL=https://nqywjpaomprykthcbsqn.supabase.co
-SUPABASE_ANON_KEY=sb_publishable_7GC7TYNWEj1of0fzJ4yCFA_ohcWvAdH
-SUPABASE_DB_PASSWORD=Gestiondeproyectos1
-JWT_SECRET=alivia_jwt_secret_2026
+SUPABASE_URL=tu_url_de_supabase
+SUPABASE_ANON_KEY=tu_anon_key
+SUPABASE_DB_PASSWORD=tu_password_de_db
+JWT_SECRET=tu_jwt_secret
 PORT=3000
 ```
 

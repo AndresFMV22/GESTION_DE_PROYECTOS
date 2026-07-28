@@ -25,27 +25,38 @@ export default function ModulePage() {
   useEffect(() => { loadData(); }, [moduleId]);
 
   async function loadData() {
+    const id = parseInt(moduleId);
+
+    api.reminders.getAll({ moduleId: id })
+      .then(setReminders)
+      .catch(e => console.error('Reminders fetch error:', e));
+
     try {
-      const id = parseInt(moduleId);
-      const modulesData = await api.modules.getAll();
+      const [modulesData, categoriesData] = await Promise.all([
+        api.modules.getAll(),
+        api.modules.getCategories(id),
+      ]);
+
+      setCategories(categoriesData);
+
       const mod = modulesData.find(m => m.id === id);
       if (mod) {
         setModuleName(mod.name);
         setModuleSlug(mod.slug);
         setModuleIsPremium(mod.is_premium);
         if (!mod.user_has_module && !mod.is_premium) {
-          await api.modules.toggle(id);
+          try {
+            await api.modules.toggle(id);
+            const reloaded = await api.modules.getAll();
+            setModules(reloaded.filter(m => m.user_has_module));
+          } catch (toggleErr) {
+            console.error('Toggle error:', toggleErr);
+            setModules(modulesData.filter(m => m.user_has_module));
+          }
+        } else {
+          setModules(modulesData.filter(m => m.user_has_module));
         }
       }
-
-      const [refreshedModules, remindersData, categoriesData] = await Promise.all([
-        api.modules.getAll(),
-        api.reminders.getAll({ moduleId: id }),
-        api.modules.getCategories(id),
-      ]);
-      setModules(refreshedModules.filter(m => m.user_has_module));
-      setReminders(remindersData);
-      setCategories(categoriesData);
     } catch (e) {
       console.error('ModulePage loadData error:', e);
     }
