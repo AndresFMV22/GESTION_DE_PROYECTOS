@@ -642,20 +642,29 @@
     line-height: 1.7;
   }
 
-  .ctx-fact {
+  .ctx-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     margin-top: 30px;
-    padding: 24px 32px;
-    border-radius: 14px;
-    background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(99,102,241,0.02));
-    border: 1px solid rgba(99,102,241,0.15);
-    font-size: 14px;
-    color: #c7d2fe;
-    line-height: 1.7;
-    text-align: center;
   }
 
-  .ctx-fact strong {
-    color: #a5b4fc;
+  .fact-item {
+    padding: 18px 24px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    font-size: 13px;
+    color: #9ca3af;
+    line-height: 1.6;
+    border-left: 3px solid rgba(99,102,241,0.4);
+  }
+
+  .fact-item:nth-child(2) { border-left-color: rgba(34,197,94,0.4); }
+  .fact-item:nth-child(3) { border-left-color: rgba(245,158,11,0.4); }
+
+  .fact-item strong {
+    color: #e5e7eb;
   }
 
   @media (max-width: 900px) {
@@ -1012,8 +1021,16 @@
     </div>
   </div>
 
-  <div class="ctx-fact">
-    <strong>Dato clave:</strong> La Tecnica de Arboles, tambien conocida como Metodo de Arboles, fue desarrollada como parte del Enfoque del Marco Logico (EML) utilizado por organismos internacionales como el Banco Interamericano de Desarrollo (BID) y el Banco Mundial para la formulacion y evaluacion de proyectos. Su fortaleza radica en que convierte una situacion problematica compleja en una estructura visual clara de causas y efectos, permitiendo que todos los involucrados tengan una comprension compartida del problema y las posibles soluciones. La metodologia en 5 pasos garantiza un proceso sistematico que va desde el diagnostico hasta la accion, asegurando que las soluciones propuestas esten realmente fundamentadas en las causas del problema y no solo en sus sintomas.
+  <div class="ctx-facts">
+    <div class="fact-item">
+      <strong>¿Sabias que?</strong> La app Alivia esta diseñada para personas entre 25 y 55 años que tienen que gestionar hasta 7 areas distintas de responsabilidad: hogar, trabajo, finanzas, salud, familia, vehiculo y ocio. Todo en una sola plataforma.
+    </div>
+    <div class="fact-item">
+      <strong>¿Sabias que?</strong> Alivia usa un modelo Freemium que permite acceso gratuito a los modulos esenciales (hogar, vehiculo, familia) y funcionalidades premium como salud, finanzas y mascotas por solo $9.99 al mes.
+    </div>
+    <div class="fact-item">
+      <strong>¿Sabias que?</strong> Mas del 65% de los adultos admite olvidar compromisos importantes al menos una vez al mes. Alivia resuelve este problema con recordatorios inteligentes, priorizacion automatica y notificaciones personalizadas.
+    </div>
   </div>
 </div>
 
