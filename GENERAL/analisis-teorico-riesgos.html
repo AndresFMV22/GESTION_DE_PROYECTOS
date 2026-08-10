@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alivia — Analisis Teorico y Matriz de Riesgos</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { background: #07070d; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #07070d;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before, body::after {
+    content: '';
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: 0;
+    pointer-events: none;
+  }
+  body::before {
+    width: 500px; height: 500px;
+    background: rgba(99, 102, 241, 0.12);
+    top: -100px; left: -100px;
+  }
+  body::after {
+    width: 400px; height: 400px;
+    background: rgba(168, 85, 247, 0.10);
+    bottom: -50px; right: -50px;
+  }
+
+  .header {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 40px 20px 20px;
+  }
+
+  .logo-img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 8px;
+  }
+
+  .tagline {
+    font-size: 14px;
+    color: #6b7280;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    color: #9ca3af;
+    margin-top: 12px;
+    font-weight: 300;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    padding: 40px 20px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 60px 0 12px;
+    background: linear-gradient(135deg, #6366f1, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-intro {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 14px;
+    max-width: 850px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+
+  .factor-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 24px;
+    border-radius: 12px;
+    margin: 0 auto 28px;
+    max-width: 500px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .factor-banner.extern {
+    background: linear-gradient(135deg, rgba(239,68,68,0.12), rgba(239,68,68,0.04));
+    border: 1px solid rgba(239,68,68,0.25);
+    color: #fca5a5;
+  }
+
+  .factor-banner.intern {
+    background: linear-gradient(135deg, rgba(34,197,94,0.12), rgba(34,197,94,0.04));
+    border: 1px solid rgba(34,197,94,0.25);
+    color: #86efac;
+  }
+
+  .group-title {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #4b5563;
+    margin: 36px 0 16px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 22px 22px 26px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s;
+    border-top: 3px solid rgba(99,102,241,0.3);
+  }
+
+  .card:hover { transform: translateY(-3px); }
+
+  .card.extern { border-top-color: rgba(239,68,68,0.35); }
+  .card.intern { border-top-color: rgba(34,197,94,0.35); }
+
+  .card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #e5e7eb;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    font-size: 13px;
+    color: #9ca3af;
+    line-height: 1.7;
+  }
+
+  .card p + p { margin-top: 10px; }
+
+  .card .tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+
+  .tag.controlable { background: rgba(34,197,94,0.12); color: #86efac; }
+  .tag.nocontrolable { background: rgba(239,68,68,0.12); color: #fca5a5; }
+
+  .conclusion-box {
+    margin-top: 40px;
+    padding: 24px 32px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(99,102,241,0.02));
+    border: 1px solid rgba(99,102,241,0.2);
+    font-size: 14px;
+    color: #c7d2fe;
+    line-height: 1.8;
+  }
+
+  .conclusion-box strong { color: #a5b4fc; }
+
+  /* Risk matrix */
+  .risk-table-wrap {
+    overflow-x: auto;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.02);
+    margin-top: 20px;
+  }
+
+  .risk-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+  }
+
+  .risk-table th,
+  .risk-table td {
+    padding: 12px 16px;
+    font-size: 13px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    vertical-align: top;
+  }
+
+  .risk-table th {
+    font-weight: 600;
+    color: #9ca3af;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(255,255,255,0.03);
+    text-align: center;
+  }
+
+  .risk-table td:first-child {
+    text-align: center;
+    font-weight: 600;
+    color: #6b7280;
+  }
+
+  .risk-table td.risk-name {
+    color: #e5e7eb;
+    font-weight: 500;
+    min-width: 220px;
+  }
+
+  .risk-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .badge.tipo-ext { background: rgba(239,68,68,0.12); color: #fca5a5; }
+  .badge.tipo-int { background: rgba(34,197,94,0.12); color: #86efac; }
+
+  .badge.prob-baja   { background: rgba(34,197,94,0.12); color: #86efac; }
+  .badge.prob-media  { background: rgba(245,158,11,0.12); color: #fde68a; }
+  .badge.prob-alta   { background: rgba(239,68,68,0.15); color: #fca5a5; }
+
+  .badge.imp-bajo    { background: rgba(99,102,241,0.12); color: #a5b4fc; }
+  .badge.imp-medio   { background: rgba(245,158,11,0.12); color: #fde68a; }
+  .badge.imp-alto    { background: rgba(249,115,22,0.15); color: #fdba74; }
+  .badge.imp-muyalto { background: rgba(239,68,68,0.18); color: #fca5a5; }
+
+  .badge.nivel-bajo  { background: rgba(34,197,94,0.15); color: #86efac; }
+  .badge.nivel-medio { background: rgba(245,158,11,0.15); color: #fde68a; }
+  .badge.nivel-alto  { background: rgba(249,115,22,0.18); color: #fdba74; }
+  .badge.nivel-crit  { background: rgba(239,68,68,0.2); color: #fca5a5; }
+
+  .mitigation {
+    color: #d1d5db;
+    font-size: 12px;
+    line-height: 1.6;
+    min-width: 260px;
+  }
+
+  /* Probabilidad x Impacto chart */
+  .chart-title {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #4b5563;
+    margin: 50px 0 16px;
+  }
+
+  .matrix-chart {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 6px;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .matrix-cell {
+    border-radius: 8px;
+    min-height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    color: rgba(255,255,255,0.85);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 6px;
+    line-height: 1.3;
+  }
+
+  .matrix-cell .r-num {
+    font-size: 9px;
+    opacity: 0.7;
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  .cell-bajo  { background: rgba(34,197,94,0.18); }
+  .cell-medio { background: rgba(245,158,11,0.2); }
+  .cell-alto  { background: rgba(249,115,22,0.22); }
+  .cell-crit  { background: rgba(239,68,68,0.28); }
+
+  .axis-labels {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    max-width: 560px;
+    margin: 8px auto 0;
+    font-size: 11px;
+    color: #6b7280;
+    text-align: center;
+  }
+
+  .axis-label-vertical {
+    max-width: 560px;
+    margin: 40px auto 0;
+    text-align: center;
+    font-size: 11px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  @media (max-width: 700px) {
+    .container { padding: 24px 12px 60px; }
+    .logo-img { width: 160px; height: 160px; }
+    .section-title { font-size: 18px; }
+    .subtitle { font-size: 14px; }
+    .grid { grid-template-columns: 1fr; }
+    .matrix-cell { min-height: 44px; font-size: 9px; }
+    .matrix-cell .r-num { font-size: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="logo.png" alt="Alivia" class="logo-img">
+  <div class="tagline">La paz de saber que no olvidaras nada</div>
+  <div class="subtitle">Analisis Teorico y Matriz de Riesgos</div>
+</div>
+
+<div class="container">
+
+  <!-- ===== ANALISIS TEORICO ===== -->
+  <div class="section-title">Analisis Teorico</div>
+  <div class="section-intro">
+    Es el analisis de todo lo que va a haber alrededor del proyecto. Examinamos las variables
+    controlables y no controlables que condicionan el desarrollo y comercializacion de Alivia,
+    una plataforma integral de recordatorios para la vida adulta.
+  </div>
+
+  <!-- FACTORES EXTERNOS -->
+  <div class="factor-banner extern">Factores Externos (No Controlables)</div>
+
+  <div class="group-title">Financieros</div>
+  <div class="grid">
+    <div class="card extern">
+      <span class="tag nocontrolable">No Controlable</span>
+      <h4>Tipos de Interes</h4>
+      <p>Las tasas de interes afectan el costo del credito para financiar el desarrollo y la capacidad de gasto del consumidor en suscripciones premium. En un entorno de tasas altas, los clientes potenciales reducen su gasto discrecional y la conversion de usuarios gratuitos a premium se vuelve mas lenta.</p>
+    </div>
+    <div class="card extern">
+      <span class="tag nocontrolable">No Controlable</span>
+      <h4>Tipos de Cambio</h4>
+      <p>La expansion a Latinoamerica y otros mercados expone al proyecto a fluctuaciones cambiarias. Los ingresos por suscripciones internacionales y los costos de infraestructura pagados en dolares se ven afectados por la volatilidad de las monedas locales frente al dolar.</p>
+    </div>
+    <div class="card extern">
+      <span class="tag nocontrolable">No Controlable</span>
+      <h4>Disponibilidad de Credito</h4>
+      <p>El acceso a financiamiento (inversionistas angeles, capital de riesgo, credito bancario) condiciona la velocidad de desarrollo y la capacidad de escalar la plataforma. La disponibilidad de credito depende de las condiciones del mercado financiero, fuera del control del proyecto.</p>
+    </div>
+  </div>
+
+  <div class="group-title">Estrategicos</div>
+  <div class="grid">
+    <div class="card extern">
+      <span class="tag nocontrolable">No Controlable</span>
+      <h4>Competencia</h4>
+      <p>Aplicaciones consolidadas como Todoist, Trello, Google Keep, Notion y Any.do ofrecen funcionalidades genericas de gestion de tareas. La rivalidad en el sector es alta y las grandes plataformas pueden copiar funcionalidades rapidamente. Alivia se diferencia por su enfoque integral en las multiples areas de la vida adulta.</p>
+    </div>
+    <div class="card extern">
+      <span class="tag nocontrolable">No Controlable</span>
+      <h4>Sector Economico</h4>
+      <p>El mercado global de aplicaciones de productividad crece alrededor del 14% anual y se proyecta que supere los 8 mil millones de dolares hacia 2028. Es un sector atractivo con tendencia creciente, pero con alta rivalidad y expectativas de los usuarios en constante evolucion.</p>
+    </div>
+    <div class="card extern">
+      <span class="tag nocontrolable">No Controlable</span>
+      <h4>Clientes</h4>
+      <p>Adultos de 25 a 55 anos economicamente activos en Mexico y Latinoamerica, con agendas saturadas y multiples roles simultaneos. Es un segmento con alta necesidad de organizacion, pero sensible al precio y con preferencias cambiantes segun tendencias tecnologicas y habitos de consumo.</p>
+    </div>
+  </div>
+
+  <div class="group-title">Sociales</div>
+  <div class="grid">
+    <div class="card extern">
+      <span class="tag nocontrolable">No Controlable</span>
+      <h4>Cultura</h4>
+      <p>La cultura latinoamericana esta orientada a la familia y la comunidad, lo que genera una mayor cantidad de compromisos sociales que requieren organizacion. Existe alta disposicion a herramientas de apoyo, pero preferencia por aplicaciones en espanol, intuitivas y adaptadas a la realidad local.</p>
+    </div>
+    <div class="card extern">
+      <span class="tag nocontrolable">No Controlable</span>
+      <h4>Leyes</h4>
+      <p>El proyecto debe cumplir con regulaciones de proteccion de datos como la LFPDPPP en Mexico, la LGPD en Brasil y el GDPR de la Union Europea para expansion internacional. Los cambios legislativos pueden exigir ajustes en politicas de privacidad, almacenamiento y manejo de informacion sensible.</p>
+    </div>
+  </div>
+
+  <div class="group-title">Azar</div>
+  <div class="grid">
+    <div class="card extern">
+      <span class="tag nocontrolable">No Controlable</span>
+      <h4>Eventos</h4>
+      <p>Pandemias, crisis economicas, disrupciones tecnologicas o cambios en habitos de consumo pueden alterar la demanda. La pandemia de COVID-19 acelero la digitalizacion e impulso el uso de aplicaciones de productividad, demostrando que los eventos externos pueden favorecer o perjudicar al proyecto.</p>
+    </div>
+    <div class="card extern">
+      <span class="tag nocontrolable">No Controlable</span>
+      <h4>Medio Ambiente</h4>
+      <p>Eventos naturales o fallas de infraestructura pueden afectar la continuidad del servicio en la nube y la conectividad de los usuarios. Desastres naturales en regiones donde operan los centros de datos o en las zonas de los usuarios pueden interrumpir temporalmente el acceso a la plataforma.</p>
+    </div>
+  </div>
+
+  <!-- FACTORES INTERNOS -->
+  <div class="factor-banner intern">Factores Internos (Controlables)</div>
+
+  <div class="group-title">Financieros</div>
+  <div class="grid">
+    <div class="card intern">
+      <span class="tag controlable">Controlable</span>
+      <h4>Tesoreria</h4>
+      <p>Gestion del flujo de caja para cubrir costos operativos (servidores, desarrollo, marketing) mientras maduran los ingresos recurrentes por suscripciones. Una administracion prudente de la tesoreria permite sostener el proyecto durante la etapa de crecimiento sin quiebres financieros.</p>
+    </div>
+    <div class="card intern">
+      <span class="tag controlable">Controlable</span>
+      <h4>Financiacion</h4>
+      <p>Combinacion de recursos propios, inversion inicial y reinversion de los ingresos premium para sostener el crecimiento. El equipo decide la estructura de financiacion, evitando una dependencia excesiva del capital externo y sus condiciones.</p>
+    </div>
+    <div class="card intern">
+      <span class="tag controlable">Controlable</span>
+      <h4>Credito a Clientes</h4>
+      <p>El modelo de suscripcion mensual o anual y la disponibilidad de medios de pago locales (tarjetas, transferencias, puntos de venta) facilitan la conversion de usuarios gratuitos a premium. El proyecto controla las condiciones comerciales y los plazos de cobro.</p>
+    </div>
+  </div>
+
+  <div class="group-title">Estrategicos</div>
+  <div class="grid">
+    <div class="card intern">
+      <span class="tag controlable">Controlable</span>
+      <h4>I + D + I</h4>
+      <p>Desarrollo continuo de funcionalidades diferenciadoras como recordatorios inteligentes, priorizacion automatica de notificaciones y modulos especializados por area de la vida. La inversion en investigacion, desarrollo e innovacion es una decision interna del equipo.</p>
+    </div>
+    <div class="card intern">
+      <span class="tag controlable">Controlable</span>
+      <h4>Formacion</h4>
+      <p>Capacitacion del equipo en metodologias agiles, desarrollo movil y web, diseno de experiencia de usuario y nuevas tecnologias. La formacion continua es una decision interna que fortalece las capacidades del equipo y la calidad del producto.</p>
+    </div>
+    <div class="card intern">
+      <span class="tag controlable">Controlable</span>
+      <h4>Capital Intelectual</h4>
+      <p>Conocimiento acumulado del equipo sobre las necesidades del mercado latinoamericano, la experiencia de usuario y la marca Alivia como propuesta de valor unica. La gestion y proteccion de este capital (codigo fuente, metodologias, marca) esta bajo control del proyecto.</p>
+    </div>
+    <div class="card intern">
+      <span class="tag controlable">Controlable</span>
+      <h4>Fusiones</h4>
+      <p>Posibles alianzas estrategicas o acuerdos de integracion con otras plataformas (calendarios, servicios financieros, sistemas de salud) para ampliar funcionalidades y alcance. La decision de asociarse o fusionarse es del equipo del proyecto.</p>
+    </div>
+  </div>
+
+  <div class="group-title">Azar</div>
+  <div class="grid">
+    <div class="card intern">
+      <span class="tag controlable">Controlable</span>
+      <h4>Empleados</h4>
+      <p>Dependencia del equipo fundador y de los desarrolladores clave. La rotacion o perdida de personal critico puede retrasar el plan de trabajo. La gestion del talento, la cultura organizacional y los incentivos son decisiones internas.</p>
+    </div>
+    <div class="card intern">
+      <span class="tag controlable">Controlable</span>
+      <h4>Productos / Servicios</h4>
+      <p>Calidad del software, control de errores, tiempos de respuesta del servidor y disponibilidad de la plataforma. La reputacion del producto depende de la estabilidad, y su calidad esta totalmente bajo el control del equipo de desarrollo.</p>
+    </div>
+    <div class="card intern">
+      <span class="tag controlable">Controlable</span>
+      <h4>Activos</h4>
+      <p>Infraestructura tecnologica, equipos de desarrollo, propiedad intelectual del codigo fuente y de la marca. La administracion, mantenimiento y renovacion de los activos son responsabilidades internas del proyecto.</p>
+    </div>
+    <div class="card intern">
+      <span class="tag controlable">Controlable</span>
+      <h4>Acceso</h4>
+      <p>Disponibilidad de la aplicacion en tiendas digitales (App Store, Google Play) y en la web. Aunque las politicas de las plataformas son externas, el proyecto controla la distribucion propia a traves de la web y la promocion directa de descarga.</p>
+    </div>
+  </div>
+
+  <div class="group-title">Sociales</div>
+  <div class="grid">
+    <div class="card intern">
+      <span class="tag controlable">Controlable</span>
+      <h4>Reclutamiento</h4>
+      <p>Atraccion y retencion de talento en desarrollo, diseno y marketing para el crecimiento del equipo. Las politicas de contratacion, los perfiles buscados y las condiciones laborales son decisiones internas del proyecto.</p>
+    </div>
+    <div class="card intern">
+      <span class="tag controlable">Controlable</span>
+      <h4>Suministros</h4>
+      <p>Proveedores de servicios en la nube, herramientas de desarrollo y servicios externos. El proyecto controla la seleccion de proveedores, la negociacion de contratos y la diversificacion para reducir dependencias.</p>
+    </div>
+    <div class="card intern">
+      <span class="tag controlable">Controlable</span>
+      <h4>Transparencia</h4>
+      <p>Comunicacion clara con los usuarios sobre precios, uso de datos y cambios en el producto. La transparencia genera confianza y fidelidad, y su nivel esta determinado por las politicas internas de comunicacion.</p>
+    </div>
+    <div class="card intern">
+      <span class="tag controlable">Controlable</span>
+      <h4>RSC</h4>
+      <p>Compromiso con la responsabilidad social corporativa: accesibilidad para adultos mayores, practicas eticas en el manejo de datos y contribucion al bienestar de la comunidad. Las iniciativas de RSC son decisiones voluntarias del proyecto.</p>
+    </div>
+  </div>
+
+  <div class="conclusion-box">
+    <strong>Conclusiones del analisis:</strong> El proyecto Alivia tiene control total sobre los factores internos (tesoreria, financiacion, I+D+I, capital intelectual, gestion del talento, calidad del producto y relacion con proveedores), lo que permite planificar y mitigar los riesgos asociados a estas variables. Los factores externos (tipos de interes, tipo de cambio, competencia, legislacion y eventos de azar) escapan al control directo del proyecto, por lo que requieren monitoreo constante, planes de contingencia y estrategias de adaptacion. La estrategia de diferenciacion por nicho (enfoque integral en la vida adulta, orientado a Latinoamerica) y el modelo freemium reducen la exposicion a los factores externos mas criticos, permitiendo sostener el crecimiento con recursos propios y una base de usuarios en expansion.
+  </div>
+
+  <!-- ===== MATRIZ DE RIESGOS ===== -->
+  <div class="section-title">Matriz de Riesgos</div>
+  <div class="section-intro">
+    Identificacion de los riesgos del proyecto Alivia, evaluacion de su probabilidad e impacto,
+    y definicion de estrategias de mitigacion para cada uno.
+  </div>
+
+  <div class="risk-table-wrap">
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th style="width:36px">#</th>
+          <th>Riesgo</th>
+          <th style="width:70px">Tipo</th>
+          <th style="width:90px">Probabilidad</th>
+          <th style="width:90px">Impacto</th>
+          <th style="width:80px">Nivel</th>
+          <th>Mitigacion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td class="risk-name">Fuga de datos personales de usuarios</td>
+          <td><span class="badge tipo-ext">Externo</span></td>
+          <td><span class="badge prob-baja">Baja</span></td>
+          <td><span class="badge imp-muyalto">Muy Alto</span></td>
+          <td><span class="badge nivel-crit">Critico</span></td>
+          <td class="mitigation">Cifrado de extremo a extremo, autenticacion de dos factores, cumplimiento de la LFPDPPP, auditorias de seguridad periodicas y plan de respuesta a incidentes.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="risk-name">Alta competencia de aplicaciones consolidadas</td>
+          <td><span class="badge tipo-ext">Externo</span></td>
+          <td><span class="badge prob-alta">Alta</span></td>
+          <td><span class="badge imp-alto">Alto</span></td>
+          <td><span class="badge nivel-alto">Alto</span></td>
+          <td class="mitigation">Diferenciacion por enfoque integral en la vida adulta, orientacion al nicho latinoamericano, mejora continua de funcionalidades y posicionamiento de marca.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="risk-name">Baja adopcion o desercion de usuarios</td>
+          <td><span class="badge tipo-ext">Externo</span></td>
+          <td><span class="badge prob-media">Media</span></td>
+          <td><span class="badge imp-alto">Alto</span></td>
+          <td><span class="badge nivel-alto">Alto</span></td>
+          <td class="mitigation">Pruebas piloto, diseno de experiencia de usuario centrado en el cliente, estrategia de marketing digital y version gratuita que reduzca la barrera de entrada.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="risk-name">Cambios en las tasas de interes</td>
+          <td><span class="badge tipo-ext">Externo</span></td>
+          <td><span class="badge prob-media">Media</span></td>
+          <td><span class="badge imp-medio">Medio</span></td>
+          <td><span class="badge nivel-medio">Medio</span></td>
+          <td class="mitigation">Financiacion diversificada, modelo freemium con ingresos recurrentes y plan de gastos prudente que reduzca la dependencia del credito externo.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="risk-name">Fluctuacion del tipo de cambio</td>
+          <td><span class="badge tipo-ext">Externo</span></td>
+          <td><span class="badge prob-baja">Baja</span></td>
+          <td><span class="badge imp-medio">Medio</span></td>
+          <td><span class="badge nivel-bajo">Bajo</span></td>
+          <td class="mitigation">Precios ajustados a monedas locales, reserva financiera en moneda fuerte y negociacion de contratos de infraestructura en moneda local cuando sea posible.</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td class="risk-name">Cambios regulatorios en proteccion de datos</td>
+          <td><span class="badge tipo-ext">Externo</span></td>
+          <td><span class="badge prob-media">Media</span></td>
+          <td><span class="badge imp-alto">Alto</span></td>
+          <td><span class="badge nivel-alto">Alto</span></td>
+          <td class="mitigation">Asesoria legal continua, politicas de privacidad actualizadas, cumplimiento proactivo de normativas locales e internacionales y designacion de responsable de proteccion de datos.</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td class="risk-name">Fallas tecnicas o errores en la plataforma</td>
+          <td><span class="badge tipo-int">Interno</span></td>
+          <td><span class="badge prob-media">Media</span></td>
+          <td><span class="badge imp-alto">Alto</span></td>
+          <td><span class="badge nivel-alto">Alto</span></td>
+          <td class="mitigation">Integracion y despliegue continuos (CI/CD), pruebas automatizadas, monitoreo de disponibilidad y tiempos de respuesta, y plan de respuesta a incidentes.</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td class="risk-name">Fuga de talento clave del equipo</td>
+          <td><span class="badge tipo-int">Interno</span></td>
+          <td><span class="badge prob-baja">Baja</span></td>
+          <td><span class="badge imp-alto">Alto</span></td>
+          <td><span class="badge nivel-medio">Medio</span></td>
+          <td class="mitigation">Cultura organizacional solida, incentivos y beneficios, documentacion del conocimiento y plan de sucesion para roles criticos.</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td class="risk-name">Insuficiente flujo de caja</td>
+          <td><span class="badge tipo-int">Interno</span></td>
+          <td><span class="badge prob-media">Media</span></td>
+          <td><span class="badge imp-alto">Alto</span></td>
+          <td><span class="badge nivel-alto">Alto</span></td>
+          <td class="mitigation">Control estricto de gastos, reinversion de ingresos premium, proyecciones financieras mensuales y linea de financiacion de contingencia.</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td class="risk-name">Dependencia de plataformas de distribucion</td>
+          <td><span class="badge tipo-ext">Externo</span></td>
+          <td><span class="badge prob-media">Media</span></td>
+          <td><span class="badge imp-medio">Medio</span></td>
+          <td><span class="badge nivel-medio">Medio</span></td>
+          <td class="mitigation">Distribucion web propia y aplicacion web progresiva (PWA), campanas de descarga directa y reduccion de la dependencia de las tiendas de aplicaciones.</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td class="risk-name">Ataques de ciberseguridad</td>
+          <td><span class="badge tipo-ext">Externo</span></td>
+          <td><span class="badge prob-media">Media</span></td>
+          <td><span class="badge imp-alto">Alto</span></td>
+          <td><span class="badge nivel-alto">Alto</span></td>
+          <td class="mitigation">Firewalls y protecciones de red, monitoreo de intrusiones, copias de seguridad periodicas y protocolos de respuesta a incidentes de seguridad.</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td class="risk-name">Problemas con proveedores de servicios en la nube</td>
+          <td><span class="badge tipo-ext">Externo</span></td>
+          <td><span class="badge prob-baja">Baja</span></td>
+          <td><span class="badge imp-medio">Medio</span></td>
+          <td><span class="badge nivel-bajo">Bajo</span></td>
+          <td class="mitigation">Contratos con acuerdos de nivel de servicio (SLA), redundancia en multiples regiones, copias de seguridad distribuidas y proveedores alternativos.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Matriz visual -->
+  <div class="chart-title">Matriz Probabilidad x Impacto</div>
+  <div class="matrix-chart">
+    <div class="matrix-cell cell-bajo"><span class="r-num"></span></div>
+    <div class="matrix-cell cell-bajo"><span class="r-num"></span></div>
+    <div class="matrix-cell cell-bajo">2<br><span class="r-num">R5, R12</span></div>
+    <div class="matrix-cell cell-medio">1<br><span class="r-num">R8</span></div>
+    <div class="matrix-cell cell-crit">1<br><span class="r-num">R1</span></div>
+
+    <div class="matrix-cell cell-bajo"><span class="r-num"></span></div>
+    <div class="matrix-cell cell-bajo"><span class="r-num"></span></div>
+    <div class="matrix-cell cell-bajo"><span class="r-num"></span></div>
+    <div class="matrix-cell cell-bajo"><span class="r-num"></span></div>
+    <div class="matrix-cell cell-medio"><span class="r-num"></span></div>
+
+    <div class="matrix-cell cell-bajo"><span class="r-num"></span></div>
+    <div class="matrix-cell cell-bajo"><span class="r-num"></span></div>
+    <div class="matrix-cell cell-medio">2<br><span class="r-num">R4, R10</span></div>
+    <div class="matrix-cell cell-alto">5<br><span class="r-num">R3, R6, R7, R9, R11</span></div>
+    <div class="matrix-cell cell-crit"><span class="r-num"></span></div>
+
+    <div class="matrix-cell cell-bajo"><span class="r-num"></span></div>
+    <div class="matrix-cell cell-bajo"><span class="r-num"></span></div>
+    <div class="matrix-cell cell-medio"><span class="r-num"></span></div>
+    <div class="matrix-cell cell-alto">1<br><span class="r-num">R2</span></div>
+    <div class="matrix-cell cell-crit"><span class="r-num"></span></div>
+
+    <div class="matrix-cell cell-bajo"><span class="r-num"></span></div>
+    <div class="matrix-cell cell-bajo"><span class="r-num"></span></div>
+    <div class="matrix-cell cell-bajo"><span class="r-num"></span></div>
+    <div class="matrix-cell cell-bajo"><span class="r-num"></span></div>
+    <div class="matrix-cell cell-bajo"><span class="r-num"></span></div>
+  </div>
+  <div class="axis-label-vertical">Probabilidad: Baja &#8594; Alta</div>
+  <div class="axis-labels">
+    <span>Bajo</span><span></span><span>Medio</span><span>Alto</span><span>Muy Alto</span>
+  </div>
+  <div class="axis-labels" style="margin-top:2px; color:#4b5563; letter-spacing:2px; font-size:10px; text-transform:uppercase;">
+    <span></span><span></span><span>Impacto</span><span></span><span></span>
+  </div>
+
+  <div class="conclusion-box" style="margin-top:60px;">
+    <strong>Resumen de la matriz:</strong> El proyecto Alivia presenta <strong>1 riesgo critico</strong>
+    (fuga de datos), <strong>6 riesgos altos</strong> (competencia, baja adopcion, cambios regulatorios,
+    fallas tecnicas, flujo de caja y ciberseguridad), <strong>3 riesgos medios</strong> y
+    <strong>2 riesgos bajos</strong>. Los riesgos criticos y altos se concentran en la seguridad de la
+    informacion y la competitividad del mercado, por lo que el plan de gestion priorizara la
+    implementacion de medidas de seguridad robustas, la diferenciacion continua del producto y la
+    administracion financiera prudente. Los riesgos bajos se monitorearan de forma periodica sin
+    requerir acciones inmediatas.
+  </div>
+
+</div>
+
+</body>
+</html>
