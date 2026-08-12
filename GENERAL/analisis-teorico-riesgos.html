@@ -278,6 +278,65 @@
     min-width: 260px;
   }
 
+  /* Tabla comparativa de competidores */
+  .comp-wrap {
+    overflow-x: auto;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.02);
+    margin-top: 20px;
+  }
+
+  .comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+  }
+
+  .comp-table th,
+  .comp-table td {
+    padding: 12px 14px;
+    font-size: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    vertical-align: top;
+  }
+
+  .comp-table th {
+    font-weight: 600;
+    color: #9ca3af;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(255,255,255,0.03);
+  }
+
+  .comp-table td.criterion {
+    text-align: left;
+    color: #d1d5db;
+    font-weight: 500;
+  }
+
+  .comp-table .col-alivia {
+    background: rgba(99,102,241,0.06);
+    border-left: 1px solid rgba(99,102,241,0.2);
+    border-right: 1px solid rgba(99,102,241,0.2);
+  }
+
+  .comp-table .col-alivia th {
+    color: #a5b4fc;
+    background: rgba(99,102,241,0.12);
+  }
+
+  .comp-table .yes { color: #86efac; font-size: 13px; }
+  .comp-table .no { color: #6b7280; font-size: 13px; }
+  .comp-table .partial { color: #fde68a; font-size: 13px; }
+
+  .comp-highlight {
+    color: #a5b4fc;
+    font-weight: 500;
+  }
+
   /* Probabilidad x Impacto chart */
   .chart-title {
     text-align: center;
@@ -541,6 +600,96 @@
 
   <div class="conclusion-box">
     <strong>Conclusiones del analisis:</strong> El proyecto Alivia tiene control total sobre los factores internos (tesoreria, financiacion, I+D+I, capital intelectual, gestion del talento, calidad del producto y relacion con proveedores), lo que permite planificar y mitigar los riesgos asociados a estas variables. Los factores externos (tipos de interes, tipo de cambio, competencia, legislacion y eventos de azar) escapan al control directo del proyecto, por lo que requieren monitoreo constante, planes de contingencia y estrategias de adaptacion. La estrategia de diferenciacion por nicho (enfoque integral en la vida adulta, orientado a Latinoamerica) y el modelo freemium reducen la exposicion a los factores externos mas criticos, permitiendo sostener el crecimiento con recursos propios y una base de usuarios en expansion.
+  </div>
+
+  <!-- ===== DIFERENCIACION COMPETITIVA ===== -->
+  <div class="section-title">Diferenciacion frente a la competencia</div>
+  <div class="section-intro">
+    Comparacion de Alivia con las principales aplicaciones de organizacion y recordatorios
+    del mercado, para evidenciar la propuesta de valor unica del proyecto.
+  </div>
+
+  <div class="comp-wrap">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th style="width:24%">Criterio</th>
+          <th>Google Calendar</th>
+          <th>Todoist</th>
+          <th>Trello</th>
+          <th>Google Keep</th>
+          <th class="col-alivia">Alivia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="criterion">Enfoque principal</td>
+          <td>Calendario y eventos</td>
+          <td>Lista de tareas</td>
+          <td>Tableros de proyectos</td>
+          <td>Notas rapidas</td>
+          <td class="col-alivia comp-highlight">Recordatorios integrales de la vida adulta</td>
+        </tr>
+        <tr>
+          <td class="criterion">Modulos por area de vida</td>
+          <td><span class="no">&#10007;</span></td>
+          <td><span class="no">&#10007;</span></td>
+          <td><span class="no">&#10007;</span></td>
+          <td><span class="no">&#10007;</span></td>
+          <td class="col-alivia"><span class="yes">&#10003;</span> Hogar, salud, finanzas, familia, vehiculo, mascotas</td>
+        </tr>
+        <tr>
+          <td class="criterion">Recordatorios inteligentes con recurrencia</td>
+          <td><span class="partial">&#9888;</span> Basica</td>
+          <td><span class="partial">&#9888;</span> Manual</td>
+          <td><span class="no">&#10007;</span></td>
+          <td><span class="no">&#10007;</span></td>
+          <td class="col-alivia"><span class="yes">&#10003;</span> Priorizacion automatica</td>
+        </tr>
+        <tr>
+          <td class="criterion">Plantillas predefinidas por responsabilidad</td>
+          <td><span class="no">&#10007;</span></td>
+          <td><span class="no">&#10007;</span></td>
+          <td><span class="partial">&#9888;</span> Limitadas</td>
+          <td><span class="no">&#10007;</span></td>
+          <td class="col-alivia"><span class="yes">&#10003;</span> Tareas tipicas de cada area</td>
+        </tr>
+        <tr>
+          <td class="criterion">Orientado a Latinoamerica y espanol</td>
+          <td><span class="no">&#10007;</span></td>
+          <td><span class="no">&#10007;</span></td>
+          <td><span class="no">&#10007;</span></td>
+          <td><span class="no">&#10007;</span></td>
+          <td class="col-alivia"><span class="yes">&#10003;</span> Disenada para el contexto regional</td>
+        </tr>
+        <tr>
+          <td class="criterion">Modelo de negocio</td>
+          <td>Gratuito</td>
+          <td>Freemium</td>
+          <td>Freemium</td>
+          <td>Gratuito</td>
+          <td class="col-alivia comp-highlight">Freemium con modulos premium a $9.99/mes</td>
+        </tr>
+        <tr>
+          <td class="criterion">Plataformas</td>
+          <td>Web, movil, escritorio</td>
+          <td>Web, movil</td>
+          <td>Web, movil</td>
+          <td>Web, movil</td>
+          <td class="col-alivia comp-highlight">Web + app movil (Expo)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="conclusion-box" style="margin-top:30px;">
+    <strong>Ventaja competitiva de Alivia:</strong> Mientras Google Calendar, Todoist, Trello y Google Keep
+    son herramientas genericas que gestionan calendarios, tareas, proyectos o notas por separado, Alivia
+    es la unica que integra <strong>todos los ambitos de la vida adulta</strong> (hogar, salud, finanzas,
+    familia, vehiculo y mascotas) en una sola plataforma, con recordatorios inteligentes, plantillas
+    predefinidas y una experiencia disenada especificamente para el usuario latinoamericano. Esto elimina
+    la necesidad de usar varias aplicaciones a la vez y reduce la carga cognitiva de tener que recordar
+    que recordar.
   </div>
 
   <!-- ===== MATRIZ DE RIESGOS ===== -->
