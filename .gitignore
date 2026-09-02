@@ -7,9 +7,5 @@ build/
 .DS_Store
 Thumbs.db
 
-# Copia vieja del proyecto con su propio .git, node_modules y un .env con credenciales.
-# Las fuentes vivas son GENERAL/backend, GENERAL/web y GENERAL/mobile.
-GENERAL/vida-adulto-app/
-
 # Temporales de Office
 ~$*

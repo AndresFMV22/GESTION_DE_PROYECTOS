@@ -4,53 +4,49 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Qué es este repo
 
-Repo de la materia **Gestión de Proyectos (UPB, semestre 6)**. Contiene dos tipos de material muy distintos:
+Base de conocimiento de la materia **Gestión de Proyectos (UPB, semestre 6)** y del proyecto que se formula en ella: **Alivia**, una plataforma de recordatorios de obligaciones de la vida adulta en Colombia.
 
-- **Entregables del curso** — `ENTREGA1/`, `ENTREGA2/` (guías en PDF), `PRESENTACIONES/` (.pptx de clase) y documentos HTML sueltos en `GENERAL/` (`arbol.html` = árbol de problemas/objetivos/alternativas, `analisis-teorico-riesgos.html` = marco teórico + matriz de riesgos). Estos HTML son autocontenidos, sin build: se abren directo en el navegador.
-- **El proyecto: `GENERAL/`** — "Alivia", una app freemium de recordatorios (backend + web + móvil). Todo el código vive ahí.
+**Aquí no hay código.** El repositorio es documental. La estructura y la convención de nombres están en `README.md`.
 
-Todo está en español: textos de UI, mensajes de error de la API, mensajes de commit y documentación. Mantenerlo así.
+Todo está en español: documentación, mensajes de commit y, cuando exista, el código y los textos de UI. Mantenerlo así.
 
-### Advertencia sobre la estructura de carpetas
+## El prototipo fue descartado
 
-En el historial de git la app está en la raíz del repo (`backend/`, `web/`, `mobile/`); en el working tree está bajo `GENERAL/`. Hay un rename grande sin commitear. Además, `GENERAL/vida-adulto-app/` es una **copia vieja con su propio `.git`** — no editarla; las fuentes vivas son `GENERAL/backend|web|mobile`.
+Existió una implementación previa (`GENERAL/backend`, `GENERAL/web`, `GENERAL/mobile`) con Express, React y Expo sobre Supabase. **Se eliminó del working tree por decisión del equipo**, documentada en `docs/proyecto/alcance-tecnico.md` §3: el modelo de información no soportaba el catálogo administrable, la suscripción con vigencia ni el aislamiento de datos que el producto exige.
 
-## Comandos
-
-Se corren desde `GENERAL/`:
+Sigue en el historial de git (último commit con el código: `c6109f3`). Si hace falta consultarlo:
 
 ```bash
-npm run install:all      # instala backend + mobile + web
-npm run dev              # backend (3000) + web (5173) en paralelo
-npm run dev:backend      # nodemon src/server.js
-npm run dev:web          # vite
-npm run dev:mobile       # expo start
-npm run db:seed          # crea los 7 módulos y sus categorías
-npm run db:migrate
-node backend/test-db.js  # verifica la conexión a Supabase
-curl http://localhost:3000/api/health
+git log --oneline -- GENERAL/
+git show c6109f3:GENERAL/backend/src/controllers/reminderController.js
 ```
 
-No hay tests, ni linter, ni CI. No inventar comandos para eso: los cambios se verifican corriendo la app.
+**No restaurarlo ni reutilizarlo sin decisión explícita del usuario.** Lo que valía la pena conservar ya se rescató como documentación:
 
-### Base de datos
+- El catálogo de obligaciones → `docs/proyecto/catalogo-obligaciones.md`
+- El modelo conceptual del dominio → mismo archivo, §5
+- Los defectos que lo hacían fallar → `docs/proyecto/alcance-tecnico.md` §4.1, convertidos en requisitos del sistema nuevo
 
-Postgres en Supabase, no hay BD local. Ejecutar `backend/supabase-schema.sql` y luego `backend/fix-rls.sql` (deshabilita RLS) en el SQL Editor de Supabase, y después `npm run db:seed`.
+## Documento de referencia
 
-`backend/.env` está en el gitignore. Ojo: `.env.example` está desactualizado — `src/config/database.js` lee **`SUPABASE_SERVICE_KEY`**, no el `SUPABASE_ANON_KEY` que aparece ahí. Variables necesarias: `SUPABASE_URL`, `SUPABASE_SERVICE_KEY`, `JWT_SECRET`, `PORT`.
+`docs/proyecto/alcance-tecnico.md` manda sobre cualquier otra fuente en cuanto a qué se construye. Antes de proponer trabajo de software, leerlo. Sus puntos no negociables:
 
-## Arquitectura
+- **Criterio único de aceptación:** el aviso llega antes del vencimiento, no después.
+- El catálogo de obligaciones es información administrable del sistema, nunca una constante en el código del cliente.
+- La verificación de acceso a módulos de pago ocurre en el servidor.
+- Ninguna acción destruye información del usuario sin confirmación.
+- La app móvil está fuera del alcance de esta etapa.
 
-**Backend** (`GENERAL/backend`, CommonJS, Express) — routes → controllers → cliente JS de Supabase. Sin ORM ni capa de repositorios: los controllers llaman `supabase.from(...)` directamente y cada uno envuelve su cuerpo en try/catch devolviendo un `{ error }` en español. `src/config/database.js` exporta un único cliente compartido.
+## Trabajar con los documentos
 
-La autenticación es solo JWT: `middleware/auth.js` valida el header `Authorization: Bearer` y setea `req.user`. Todas las rutas menos `/api/auth/register|login` y `/api/health` pasan por ahí. RLS está apagado, así que **el aislamiento por usuario depende únicamente del `.eq('user_id', req.user.id)` en los controllers** — toda consulta nueva sobre datos de usuario debe incluirlo.
+Los HTML de `docs/proyecto/` son autocontenidos, sin build: se abren directo en el navegador.
 
-**Modelo freemium**: vive en la tabla puente `user_modules`, donde `is_active` es la única bandera de "el usuario tiene este módulo". `activatePremium` valida solo la forma de los campos de la tarjeta y no cobra nada — es una pasarela simulada para el trabajo del curso. `deactivatePremium` **borra los recordatorios del usuario para ese módulo**.
+Las transcripciones de `docs/material-clase/` siguen un formato fijo de ocho secciones (`§1` procedencia y método … `§8` resumen ejecutivo). Si se agrega una transcripción nueva, seguir ese formato: extracción del OOXML, sección de auditoría de seguridad, y una sección `§7` que declare explícitamente qué es cita literal, qué es reconstrucción y qué no se pudo verificar. Varias contienen advertencias de integridad que importan — por ejemplo, la 08 documenta un error aritmético del material de clase (declara 18 días de duración donde sus propios datos dan 15).
 
-**Notificaciones** (`services/notificationService.js`) — un cron (`node-cron`) diario a las 08:00 que busca recordatorios vencidos y les hace `console.log`, insertando una fila en `notification_log` para no repetirlos. En realidad no se envía ningún correo, pese a que `nodemailer` esté como dependencia. El README llama a esa tabla `reminder_logs`; el schema y el código la llaman `notification_log`.
+No inventar comandos de build, test ni lint: no hay nada que ejecutar en este repositorio.
 
-**Web** (`GENERAL/web`, React 18 + Vite, CSS plano) — `services/api.js` es un wrapper delgado sobre `fetch` con `API_URL = 'http://localhost:3000/api'` hardcodeado y el JWT en `localStorage`; `AuthContext.jsx` es el único estado global. `src/index.css` es una sola hoja global de ~2400 líneas: sin CSS modules, sin Tailwind. `data/templates.js` tiene `MODULE_COLORS` y `REMINDER_TEMPLATES` (los recordatorios prellenados por módulo con su `daysInterval`); de ahí salen tanto los colores como las plantillas, así que un módulo nuevo también se agrega en ese archivo.
+## Estado que conviene tener presente
 
-Varios componentes de la landing son piezas visuales pesadas (`Prism.jsx` con WebGL vía `ogl`, `MagicBento.jsx` con partículas en canvas, `CardSwap.jsx` con GSAP). Son decorativos: nada más depende de ellos.
-
-**Móvil** (`GENERAL/mobile`, Expo + React Native) — replica la estructura de la web (screens/context/services) usando `AsyncStorage` en lugar de `localStorage`. Va por detrás de la web y comparte el mismo `localhost:3000` hardcodeado, que desde un dispositivo real no alcanza el backend.
+- El trabajo de campo (200 encuestas, 10 entrevistas, piloto de 50 usuarios) **no se ha hecho**. Bloquea el estudio de mercado de la Entrega 2 y deja el catálogo sin validar.
+- El precio de USD 9,99 **no tiene sustento**; el propio PESTEL del proyecto lo marca como la amenaza más crítica. Tratarlo como provisional.
+- El cronograma de 114 días hábiles se dimensionó suponiendo una base de software existente y **está pendiente de reestimar**.
