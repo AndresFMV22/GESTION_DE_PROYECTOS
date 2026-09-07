@@ -58,7 +58,7 @@ Transcripciones de las presentaciones de clase, numeradas según el orden del cu
 
 | Frente | Estado |
 |---|---|
-| Entrega 1 — Perfil del proyecto | Entregada |
+| Entrega 1 — Perfil del proyecto | **Sin entregar.** Redactada al ~90 %; faltan los integrantes y los diagramas de Gantt y PERT |
 | Alcance técnico | Definido, pendiente de aprobación del equipo |
 | Software | **Sin iniciar.** Construcción desde cero |
 | Trabajo de campo (200 encuestas, 10 entrevistas) | **Sin iniciar.** Bloquea el estudio de mercado de la Entrega 2 |
