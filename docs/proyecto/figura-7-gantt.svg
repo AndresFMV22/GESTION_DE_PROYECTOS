@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="921" viewBox="0 0 1450 921" role="img" font-family="Segoe UI, Calibri, Helvetica, Arial, sans-serif">
+<title>Diagrama de Gantt</title>
+<defs><marker id="dep" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.6" markerHeight="4.6" orient="auto"><path d="M 0 1.2 L 10 5 L 0 8.8 z" fill="context-stroke"/></marker></defs>
+<rect width="1450" height="921" fill="#FFFFFF"/>
+<line x1="500.0" y1="68" x2="500.0" y2="879" stroke="#E8EBEE" stroke-width="1"/>
+<text x="500.0" y="62" font-size="10" fill="#7C8794" text-anchor="middle">0</text>
+<line x1="571.9" y1="68" x2="571.9" y2="879" stroke="#E8EBEE" stroke-width="1"/>
+<text x="571.9" y="62" font-size="10" fill="#7C8794" text-anchor="middle">10</text>
+<line x1="643.9" y1="68" x2="643.9" y2="879" stroke="#E8EBEE" stroke-width="1"/>
+<text x="643.9" y="62" font-size="10" fill="#7C8794" text-anchor="middle">20</text>
+<line x1="715.8" y1="68" x2="715.8" y2="879" stroke="#E8EBEE" stroke-width="1"/>
+<text x="715.8" y="62" font-size="10" fill="#7C8794" text-anchor="middle">30</text>
+<line x1="787.7" y1="68" x2="787.7" y2="879" stroke="#E8EBEE" stroke-width="1"/>
+<text x="787.7" y="62" font-size="10" fill="#7C8794" text-anchor="middle">40</text>
+<line x1="859.6" y1="68" x2="859.6" y2="879" stroke="#E8EBEE" stroke-width="1"/>
+<text x="859.6" y="62" font-size="10" fill="#7C8794" text-anchor="middle">50</text>
+<line x1="931.6" y1="68" x2="931.6" y2="879" stroke="#E8EBEE" stroke-width="1"/>
+<text x="931.6" y="62" font-size="10" fill="#7C8794" text-anchor="middle">60</text>
+<line x1="1003.5" y1="68" x2="1003.5" y2="879" stroke="#E8EBEE" stroke-width="1"/>
+<text x="1003.5" y="62" font-size="10" fill="#7C8794" text-anchor="middle">70</text>
+<line x1="1075.4" y1="68" x2="1075.4" y2="879" stroke="#E8EBEE" stroke-width="1"/>
+<text x="1075.4" y="62" font-size="10" fill="#7C8794" text-anchor="middle">80</text>
+<line x1="1147.4" y1="68" x2="1147.4" y2="879" stroke="#E8EBEE" stroke-width="1"/>
+<text x="1147.4" y="62" font-size="10" fill="#7C8794" text-anchor="middle">90</text>
+<line x1="1219.3" y1="68" x2="1219.3" y2="879" stroke="#E8EBEE" stroke-width="1"/>
+<text x="1219.3" y="62" font-size="10" fill="#7C8794" text-anchor="middle">100</text>
+<line x1="1291.2" y1="68" x2="1291.2" y2="879" stroke="#E8EBEE" stroke-width="1"/>
+<text x="1291.2" y="62" font-size="10" fill="#7C8794" text-anchor="middle">110</text>
+<text x="910" y="897" font-size="11.5" fill="#7C8794" text-anchor="middle">Días hábiles desde el inicio del proyecto</text>
+<text x="16" y="62" font-size="11.5" font-weight="700" fill="#2B3440">ACTIVIDAD</text>
+<text x="328" y="62" font-size="11.5" font-weight="700" fill="#2B3440">RESPONSABLE</text>
+<rect x="10" y="84" width="1400" height="23" fill="#F1F4F6"/>
+<text x="18" y="101" font-size="11.5" font-weight="700" fill="#2B3440" letter-spacing="0.4">1. FORMULACIÓN</text>
+<rect x="10" y="364" width="1400" height="23" fill="#F1F4F6"/>
+<text x="18" y="381" font-size="11.5" font-weight="700" fill="#2B3440" letter-spacing="0.4">2. INVESTIGACIÓN DE MERCADO</text>
+<rect x="10" y="506" width="1400" height="23" fill="#F1F4F6"/>
+<text x="18" y="523" font-size="11.5" font-weight="700" fill="#2B3440" letter-spacing="0.4">3. DISEÑO Y DESARROLLO</text>
+<rect x="10" y="717" width="1400" height="23" fill="#F1F4F6"/>
+<text x="18" y="734" font-size="11.5" font-weight="700" fill="#2B3440" letter-spacing="0.4">4. PRUEBAS Y CUMPLIMIENTO</text>
+<rect x="10" y="813" width="1400" height="23" fill="#F1F4F6"/>
+<text x="18" y="830" font-size="11.5" font-weight="700" fill="#2B3440" letter-spacing="0.4">5. CIERRE</text>
+<path d="M 514.4 121.5 L 514.4 121.5 L 514.4 135.0" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<path d="M 536.0 144.5 L 536.0 144.5 L 536.0 158.0" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<path d="M 536.0 144.5 L 536.0 144.5 L 536.0 181.0" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 564.7 190.5 L 564.7 190.5 L 564.7 204.0" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 593.5 167.5 L 593.5 167.5 L 593.5 227.0" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 593.5 167.5 L 593.5 167.5 L 593.5 250.0" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<path d="M 593.5 167.5 L 593.5 167.5 L 593.5 273.0" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 629.5 236.5 L 629.5 236.5 L 629.5 296.0" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 586.3 213.5 L 594.3 213.5 L 594.3 328.5 L 623.5 328.5" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 629.5 259.5 L 629.5 259.5 L 629.5 319.0" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<path d="M 622.3 282.5 L 630.3 282.5 L 630.3 351.5 L 659.4 351.5" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 658.2 305.5 L 665.4 305.5 L 665.4 342.0" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 665.4 328.5 L 665.4 328.5 L 665.4 342.0" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<path d="M 687.0 351.5 L 687.0 351.5 L 687.0 392.0" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<path d="M 708.6 401.5 L 708.6 401.5 L 708.6 415.0" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<path d="M 708.6 401.5 L 708.6 401.5 L 708.6 438.0" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 780.5 424.5 L 780.5 424.5 L 780.5 461.0" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<path d="M 751.8 447.5 L 759.8 447.5 L 759.8 470.5 L 774.5 470.5" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 816.5 470.5 L 816.5 470.5 L 816.5 484.0" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<path d="M 816.5 470.5 L 816.5 470.5 L 816.5 534.0" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 845.3 493.5 L 845.3 493.5 L 845.3 557.0" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 845.3 493.5 L 845.3 493.5 L 845.3 580.0" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<path d="M 881.2 589.5 L 881.2 589.5 L 881.2 603.0" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<path d="M 902.8 566.5 L 902.8 566.5 L 902.8 626.0" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 924.4 543.5 L 932.4 543.5 L 932.4 658.5 L 983.1 658.5" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 989.1 612.5 L 989.1 612.5 L 989.1 649.0" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<path d="M 931.6 635.5 L 939.6 635.5 L 939.6 658.5 L 983.1 658.5" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 989.1 612.5 L 989.1 612.5 L 989.1 672.0" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 1097.0 658.5 L 1097.0 658.5 L 1097.0 695.0" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<path d="M 1097.0 658.5 L 1105.0 658.5 L 1105.0 754.5 L 1134.2 754.5" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<path d="M 1032.3 681.5 L 1040.3 681.5 L 1040.3 754.5 L 1134.2 754.5" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 1140.2 704.5 L 1140.2 704.5 L 1140.2 745.0" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<path d="M 1140.2 704.5 L 1140.2 704.5 L 1140.2 768.0" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 1197.7 754.5 L 1197.7 754.5 L 1197.7 791.0" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<path d="M 1183.3 777.5 L 1197.7 777.5 L 1197.7 791.0" fill="none" stroke="#7C8794" stroke-width="1.1" opacity="0.5" marker-end="url(#dep)"/>
+<path d="M 1269.6 800.5 L 1269.6 800.5 L 1269.6 841.0" fill="none" stroke="#B0544A" stroke-width="1.1" opacity="0.9" marker-end="url(#dep)"/>
+<text x="18" y="126" font-size="11" fill="#2B3440">1. Conformación del equipo y definición de roles</text>
+<text x="328" y="126" font-size="10" fill="#7C8794">Director de proyecto</text>
+<rect x="500.0" y="114" width="14.4" height="15" rx="3" fill="#B0544A"/>
+<text x="18" y="149" font-size="11" fill="#2B3440">2. Identificación y validación de la idea de proyecto</text>
+<text x="328" y="149" font-size="10" fill="#7C8794">Equipo completo</text>
+<rect x="514.4" y="137" width="21.6" height="15" rx="3" fill="#B0544A"/>
+<text x="18" y="172" font-size="11" fill="#2B3440">3. Investigación de estado del arte y fuentes sectorial…</text>
+<text x="328" y="172" font-size="10" fill="#7C8794">Analista de mercado</text>
+<rect x="536.0" y="160" width="57.5" height="15" rx="3" fill="#B0544A"/>
+<text x="18" y="195" font-size="11" fill="#2B3440">4. Construcción del árbol de problemas y de objetivos</text>
+<text x="328" y="195" font-size="10" fill="#7C8794">Director de proyecto</text>
+<rect x="564.7" y="186" width="43.2" height="9" rx="2" fill="#CFDDE9" opacity="0.75"/>
+<rect x="536.0" y="183" width="28.8" height="15" rx="3" fill="#3F7391"/>
+<text x="18" y="218" font-size="11" fill="#2B3440">5. Formulación de objetivos y alcance del proyecto</text>
+<text x="328" y="218" font-size="10" fill="#7C8794">Director de proyecto</text>
+<rect x="586.3" y="209" width="43.2" height="9" rx="2" fill="#CFDDE9" opacity="0.75"/>
+<rect x="564.7" y="206" width="21.6" height="15" rx="3" fill="#3F7391"/>
+<text x="18" y="241" font-size="11" fill="#2B3440">6. Análisis PESTEL del entorno colombiano</text>
+<text x="328" y="241" font-size="10" fill="#7C8794">Analista de mercado</text>
+<rect x="629.5" y="232" width="7.2" height="9" rx="2" fill="#CFDDE9" opacity="0.75"/>
+<rect x="593.5" y="229" width="36.0" height="15" rx="3" fill="#3F7391"/>
+<text x="18" y="264" font-size="11" fill="#2B3440">7. Análisis de competencia y benchmarking de precios</text>
+<text x="328" y="264" font-size="10" fill="#7C8794">Analista de mercado</text>
+<rect x="593.5" y="252" width="36.0" height="15" rx="3" fill="#B0544A"/>
+<text x="18" y="287" font-size="11" fill="#2B3440">8. Análisis de proveedores y cotización de servicios cl…</text>
+<text x="328" y="287" font-size="10" fill="#7C8794">Líder técnico</text>
+<rect x="622.3" y="278" width="43.2" height="9" rx="2" fill="#CFDDE9" opacity="0.75"/>
+<rect x="593.5" y="275" width="28.8" height="15" rx="3" fill="#3F7391"/>
+<text x="18" y="310" font-size="11" fill="#2B3440">9. Estudio administrativo y legal preliminar</text>
+<text x="328" y="310" font-size="10" fill="#7C8794">Analista legal y financiero</text>
+<rect x="658.2" y="301" width="7.2" height="9" rx="2" fill="#CFDDE9" opacity="0.75"/>
+<rect x="629.5" y="298" width="28.8" height="15" rx="3" fill="#3F7391"/>
+<text x="18" y="333" font-size="11" fill="#2B3440">10. Ingeniería preliminar del proyecto</text>
+<text x="328" y="333" font-size="10" fill="#7C8794">Líder técnico</text>
+<rect x="629.5" y="321" width="36.0" height="15" rx="3" fill="#B0544A"/>
+<text x="18" y="356" font-size="11" fill="#2B3440">11. Consolidación y entrega del perfil (Entrega 1)</text>
+<text x="328" y="356" font-size="10" fill="#7C8794">Equipo completo</text>
+<rect x="665.4" y="344" width="21.6" height="15" rx="3" fill="#B0544A"/>
+<text x="18" y="406" font-size="11" fill="#2B3440">12. Diseño del instrumento de encuesta</text>
+<text x="328" y="406" font-size="10" fill="#7C8794">Analista de mercado</text>
+<rect x="687.0" y="394" width="21.6" height="15" rx="3" fill="#B0544A"/>
+<text x="18" y="429" font-size="11" fill="#2B3440">13. Aplicación de encuesta a 200 adultos de 25 a 55 años</text>
+<text x="328" y="429" font-size="10" fill="#7C8794">Analista de mercado</text>
+<rect x="708.6" y="417" width="71.9" height="15" rx="3" fill="#B0544A"/>
+<text x="18" y="452" font-size="11" fill="#2B3440">14. Entrevistas a profundidad con 10 usuarios potenciale…</text>
+<text x="328" y="452" font-size="10" fill="#7C8794">Analista de mercado</text>
+<rect x="751.8" y="443" width="28.8" height="9" rx="2" fill="#CFDDE9" opacity="0.75"/>
+<rect x="708.6" y="440" width="43.2" height="15" rx="3" fill="#3F7391"/>
+<text x="18" y="475" font-size="11" fill="#2B3440">15. Procesamiento y análisis de resultados de campo</text>
+<text x="328" y="475" font-size="10" fill="#7C8794">Analista de mercado</text>
+<rect x="780.5" y="463" width="36.0" height="15" rx="3" fill="#B0544A"/>
+<text x="18" y="498" font-size="11" fill="#2B3440">16. Definición de propuesta de valor y precio localizado</text>
+<text x="328" y="498" font-size="10" fill="#7C8794">Director de proyecto</text>
+<rect x="816.5" y="486" width="28.8" height="15" rx="3" fill="#B0544A"/>
+<text x="18" y="548" font-size="11" fill="#2B3440">17. Curaduría y verificación normativa del catálogo de o…</text>
+<text x="328" y="548" font-size="10" fill="#7C8794">Analista legal y financiero</text>
+<rect x="924.4" y="539" width="64.7" height="9" rx="2" fill="#CFDDE9" opacity="0.75"/>
+<rect x="816.5" y="536" width="107.9" height="15" rx="3" fill="#3F7391"/>
+<text x="18" y="571" font-size="11" fill="#2B3440">18. Diseño UX/UI y prototipo navegable</text>
+<text x="328" y="571" font-size="10" fill="#7C8794">Analista de mercado</text>
+<rect x="902.8" y="562" width="57.5" height="9" rx="2" fill="#CFDDE9" opacity="0.75"/>
+<rect x="845.3" y="559" width="57.5" height="15" rx="3" fill="#3F7391"/>
+<text x="18" y="594" font-size="11" fill="#2B3440">19. Modelado de base de datos y esquema en Supabase</text>
+<text x="328" y="594" font-size="10" fill="#7C8794">Líder técnico</text>
+<rect x="845.3" y="582" width="36.0" height="15" rx="3" fill="#B0544A"/>
+<text x="18" y="617" font-size="11" fill="#2B3440">20. Desarrollo del backend y API REST</text>
+<text x="328" y="617" font-size="10" fill="#7C8794">Líder técnico</text>
+<rect x="881.2" y="605" width="107.9" height="15" rx="3" fill="#B0544A"/>
+<text x="18" y="640" font-size="11" fill="#2B3440">21. Validación del prototipo con usuarios</text>
+<text x="328" y="640" font-size="10" fill="#7C8794">Analista de mercado</text>
+<rect x="931.6" y="631" width="57.5" height="9" rx="2" fill="#CFDDE9" opacity="0.75"/>
+<rect x="902.8" y="628" width="28.8" height="15" rx="3" fill="#3F7391"/>
+<text x="18" y="663" font-size="11" fill="#2B3440">22. Desarrollo del frontend web</text>
+<text x="328" y="663" font-size="10" fill="#7C8794">Director de proyecto</text>
+<rect x="989.1" y="651" width="107.9" height="15" rx="3" fill="#B0544A"/>
+<text x="18" y="686" font-size="11" fill="#2B3440">23. Implementación del módulo de notificaciones programa…</text>
+<text x="328" y="686" font-size="10" fill="#7C8794">Líder técnico</text>
+<rect x="1032.3" y="677" width="107.9" height="9" rx="2" fill="#CFDDE9" opacity="0.75"/>
+<rect x="989.1" y="674" width="43.2" height="15" rx="3" fill="#3F7391"/>
+<text x="18" y="709" font-size="11" fill="#2B3440">24. Integración de la pasarela de pagos</text>
+<text x="328" y="709" font-size="10" fill="#7C8794">Líder técnico</text>
+<rect x="1097.0" y="697" width="43.2" height="15" rx="3" fill="#B0544A"/>
+<text x="18" y="759" font-size="11" fill="#2B3440">25. Pruebas funcionales y de integración</text>
+<text x="328" y="759" font-size="10" fill="#7C8794">Líder técnico</text>
+<rect x="1140.2" y="747" width="57.5" height="15" rx="3" fill="#B0544A"/>
+<text x="18" y="782" font-size="11" fill="#2B3440">26. Políticas de tratamiento de datos y verificación del…</text>
+<text x="328" y="782" font-size="10" fill="#7C8794">Analista legal y financiero</text>
+<rect x="1183.3" y="773" width="14.4" height="9" rx="2" fill="#CFDDE9" opacity="0.75"/>
+<rect x="1140.2" y="770" width="43.2" height="15" rx="3" fill="#3F7391"/>
+<text x="18" y="805" font-size="11" fill="#2B3440">27. Prueba piloto (beta) con usuarios reales</text>
+<text x="328" y="805" font-size="10" fill="#7C8794">Equipo completo</text>
+<rect x="1197.7" y="793" width="71.9" height="15" rx="3" fill="#B0544A"/>
+<text x="18" y="855" font-size="11" fill="#2B3440">28. Evaluación financiera y consolidación de la Entrega …</text>
+<text x="328" y="855" font-size="10" fill="#7C8794">Director de proyecto</text>
+<rect x="1269.6" y="843" width="50.4" height="15" rx="3" fill="#B0544A"/>
+<path d="M 687.0 342.5 l 8 9 l -8 9 l -8 -9 z" fill="#2B3440" stroke="#FFFFFF" stroke-width="1.4"/>
+<text x="700.0" y="355.0" font-size="9.5" font-weight="700" fill="#2B3440">Entrega 1</text>
+<path d="M 845.3 484.5 l 8 9 l -8 9 l -8 -9 z" fill="#2B3440" stroke="#FFFFFF" stroke-width="1.4"/>
+<text x="858.3" y="497.0" font-size="9.5" font-weight="700" fill="#2B3440">Campo cerrado</text>
+<path d="M 1140.2 695.5 l 8 9 l -8 9 l -8 -9 z" fill="#2B3440" stroke="#FFFFFF" stroke-width="1.4"/>
+<text x="1153.2" y="708.0" font-size="9.5" font-weight="700" fill="#2B3440">Producto construido</text>
+<path d="M 1269.6 791.5 l 8 9 l -8 9 l -8 -9 z" fill="#2B3440" stroke="#FFFFFF" stroke-width="1.4"/>
+<text x="1282.6" y="804.0" font-size="9.5" font-weight="700" fill="#2B3440">Piloto cerrado</text>
+<path d="M 1320.0 841.5 l 8 9 l -8 9 l -8 -9 z" fill="#2B3440" stroke="#FFFFFF" stroke-width="1.4"/>
+<text x="1333.0" y="854.0" font-size="9.5" font-weight="700" fill="#2B3440">Entrega 2</text>
+<rect x="16" y="888" width="22" height="11" rx="2" fill="#B0544A"/>
+<text x="45" y="897" font-size="10.5" fill="#7C8794">Ruta crítica</text>
+<rect x="166" y="888" width="22" height="11" rx="2" fill="#3F7391"/>
+<text x="195" y="897" font-size="10.5" fill="#7C8794">Con holgura</text>
+<rect x="316" y="888" width="22" height="11" rx="2" fill="#CFDDE9"/>
+<text x="345" y="897" font-size="10.5" fill="#7C8794">Holgura disponible</text>
+<path d="M 474 888 l 7 8 l -7 8 l -7 -8 z" fill="#2B3440"/>
+<text x="488" y="897" font-size="10.5" fill="#7C8794">Hito de control</text>
+</svg>

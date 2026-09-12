@@ -4,6 +4,7 @@
 **Materia:** Gestión de Proyectos — Formulación y Evaluación de Proyectos · UPB
 **Fecha:** 2 de septiembre de 2026
 **Estado:** propuesta de alcance para aprobación del equipo
+**Última revisión:** 11 de septiembre de 2026, tras la revisión de la Entrega 1
 
 ---
 
@@ -191,9 +192,11 @@ Estas condiciones afectan lo que se puede comprometer y conviene dejarlas escrit
 
 **Recomendación:** comprometer el producto con las obligaciones que tienen fecha límite y sanción —SOAT, tecnomecánica, predial, renta, controles médicos— y dejar el resto como acompañamiento opcional, claramente distinguido.
 
-**La prueba piloto depende de que los avisos funcionen.** El objetivo específico 6 plantea un piloto con 50 usuarios midiendo retención y reducción del incumplimiento. Ninguna de las dos cosas se puede medir mientras el aviso no llegue. El piloto no es ejecutable antes de completar los componentes 5.2 y 5.4.
+**La prueba piloto depende de que los avisos funcionen.** El objetivo específico 7 plantea un piloto con 50 usuarios midiendo retención a 14 días y el porcentaje de avisos entregados que el usuario marca como cumplidos. Ninguna de las dos cosas se puede medir mientras el aviso no llegue. El piloto no es ejecutable antes de completar los componentes 5.2 y 5.4.
 
-**El precio no se puede fijar todavía.** El análisis del entorno ya identificó el precio como la amenaza más crítica del proyecto: USD 9,99 equivalen a cerca de $40.000, más del doble de la competencia de referencia, frente a un consumidor documentadamente sensible al precio. Sin datos de disposición a pagar, ese número no tiene sustento. Debe tratarse como un valor provisional y no como una decisión tomada.
+**El precio no se puede fijar todavía.** El análisis del entorno identificó el precio como uno de los riesgos críticos: la hipótesis inicial de USD 9,99 equivale a cerca de $40.000, entre 1,4 y 2 veces la tarifa de Todoist Pro según se compare contra su plan mensual de USD 7 o su plan anual de USD 60. Sin datos de disposición a pagar, ese número no tiene sustento y el análisis lo descarta como hipótesis de partida.
+
+**Y el argumento que lo sostenía ya no sirve.** El ahorro de una multa de tránsito no justifica pagar una suscripción, porque ese aviso está disponible gratis en aplicaciones especializadas (ver la sección 8). La disposición a pagar debe sustentarse en la cobertura transversal de los siete dominios, no en el ahorro vehicular.
 
 ---
 
@@ -206,3 +209,35 @@ El sistema se construye desde cero. Es una decisión consciente: el modelo de in
 Se descarta el código, no el conocimiento: los plazos verificados de las obligaciones colombianas y los defectos detectados en la auditoría del prototipo pasan al sistema nuevo, los primeros como contenido y los segundos como requisitos.
 
 La parte difícil de este proyecto nunca fue programar. Fue averiguar y verificar cada cuánto vence realmente cada obligación en Colombia. Ese catálogo es lo que hace que Alivia sea Alivia y no una lista de tareas más.
+
+---
+
+## 8. Qué cambió tras la revisión de la Entrega 1
+
+La revisión de septiembre de 2026 produjo hallazgos que afectan a este alcance. El detalle completo está en `docs/entregables/entrega-1/revision.md`.
+
+### 8.1 El diferenciador es más estrecho de lo que este documento supone
+
+Este alcance afirma que el catálogo curado de obligaciones colombianas es lo que hace defendible al producto. **Sigue siendo cierto, pero no en todos los dominios.**
+
+En el dominio vehicular ya existe **R5**, una aplicación colombiana gratuita que avisa del vencimiento del SOAT, la técnico-mecánica y la licencia, se conecta al RUNT para traer las fechas sola, y acumula más de 41.000 calificaciones. Es decir: el módulo donde vive la multa de $1.750.890 está cubierto, gratis y mejor conectado de lo que este proyecto puede estarlo, porque la integración con el RUNT está fuera de alcance.
+
+**Consecuencia sobre el criterio de construcción:** la curaduría del catálogo debe priorizar hogar, familia y finanzas, donde no se identificó especialista. El módulo vehicular pasa a ser condición de paridad y no gancho de adquisición. El terreno defendible del producto es la **agregación de siete dominios**, no el conocimiento local en sí mismo.
+
+### 8.2 El registro de bases de datos ante la SIC no es exigible
+
+El Decreto 090 de 2018 limita esa obligación a sociedades con activos superiores a 100.000 UVT, unos $5.237 millones en 2026. Las obligaciones sustantivas —autorización previa, política de tratamiento, atención de reclamos y estándar reforzado para datos sensibles— **sí aplican siempre** y siguen siendo requisito del sistema.
+
+### 8.3 La base de datos debe aprovisionarse en Estados Unidos
+
+La Circular Externa 005 de 2017 de la SIC incluye a Estados Unidos entre los países con nivel adecuado de protección de datos y **no incluye a Brasil**. Alojar en São Paulo, pese a su menor latencia, obligaría a la vía excepcional de autorización expresa para cada transferencia, un estándar muy exigente con datos de salud.
+
+Es una restricción de diseño, no una preferencia.
+
+### 8.4 La capacidad instalada tiene un techo de 100 usuarios
+
+El nivel gratuito del proveedor de correo admite **100 envíos diarios**. Con un aviso consolidado por usuario y día, ese es el número máximo de usuarios activos que el sistema soporta sin pasar al plan de pago. Es el recurso que primero se agota, antes que la base de datos, y es el techo que cualquier proyección de crecimiento debe respetar.
+
+### 8.5 El punto 5.7 necesita un matiz
+
+El componente de interfaz web dice «sin componentes decorativos costosos». Se mantiene, pero conviene precisar dónde sí hay que invertir: **la configuración inicial y el primer aviso recibido son los dos momentos de verdad del servicio**. Si la carga inicial del catálogo es confusa, el usuario abandona antes de recibir un solo aviso y el producto nunca demuestra para qué sirve.

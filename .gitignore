@@ -9,3 +9,6 @@ Thumbs.db
 
 # Temporales de Office
 ~$*
+
+# Intermedio que produce cronograma.py; se regenera al ejecutarlo
+docs/proyecto/figuras/_datos/crono.json

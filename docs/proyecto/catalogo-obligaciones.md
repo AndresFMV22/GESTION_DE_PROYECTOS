@@ -1,6 +1,7 @@
 # Catálogo de obligaciones recurrentes
 
 **Estado:** borrador sin validar — ver §1
+**Última revisión:** 11 de septiembre de 2026
 **Origen:** rescatado del prototipo descartado (`web/src/data/templates.js`), donde vivía como constante del código
 **Destino:** este contenido alimenta el catálogo administrable descrito en el alcance técnico §5.2
 
@@ -36,8 +37,8 @@ Estas son las que sostienen la propuesta de valor. **Prioridad alta de curadurí
 
 | Obligación | Módulo | Intervalo | Consecuencia de incumplir | Fuente normativa |
 |---|---|---|---|---|
-| Renovar SOAT | Vehículo | 365 d | Comparendo de 30 SMDLV (≈ $1.750.890 en 2026) | Ley 769 de 2002 — **verificar artículo** |
-| Revisión tecnomecánica | Vehículo | 365 d | Comparendo de 15 SMDLV (≈ $875.460 en 2026) | Ley 769 de 2002 — **verificar artículo** |
+| Renovar SOAT | Vehículo | 365 d | Comparendo de 30 SMDLV (≈ $1.750.890 en 2026), inmovilización y bloqueo del RUNT | Ley 769 de 2002 — **verificar artículo** |
+| Revisión técnico-mecánica | Vehículo | 365 d **una vez exigible** | Comparendo de 15 SMDLV (≈ $875.452 en 2026) e inmovilización | Ley 769 de 2002 — **verificar artículo**. Primera revisión: **quinto año** en carros particulares, **segundo** en motocicletas |
 | Declaración de renta | Finanzas | 365 d | Sanción por extemporaneidad e intereses de mora | **Pendiente** — Estatuto Tributario, calendario DIAN |
 | Impuesto predial | Hogar | 365 d | Intereses de mora; el plazo y el descuento por pronto pago varían por municipio | **Pendiente** — acuerdo municipal aplicable |
 | Pago de tarjeta de crédito | Finanzas | 30 d | Intereses de mora y reporte a centrales de riesgo | **Pendiente** — contrato con la entidad |
@@ -141,9 +142,42 @@ Los siete módulos y su plan están definidos en el alcance técnico §4.3. Conv
 
 ---
 
-## 6. Trabajo pendiente sobre este catálogo
+## 6. Prioridad de curaduría según la competencia
+
+El análisis competitivo de la Entrega 1 cambió el orden en que conviene curar este catálogo.
+
+**El dominio vehicular ya está cubierto y gratis.** La aplicación colombiana R5 avisa del vencimiento del SOAT, la técnico-mecánica, la licencia y las multas, se conecta al RUNT para traer las fechas sola, y acumula más de 41.000 calificaciones con 4,9 sobre 5. Curar plantillas vehiculares es competir contra algo gratuito y mejor conectado.
+
+**El dominio salud tiene un entrante.** AIMEDIC, colombiana y gratuita, con recordatorios de medicación, en fase de preinscripción.
+
+**El dominio mascotas tiene varias aplicaciones** de carnet veterinario digital con recordatorios de vacunación y desparasitación, ninguna de origen colombiano verificado.
+
+**No se identificó especialista para hogar, familia ni finanzas** — aunque tampoco se buscó a fondo en los dos últimos.
+
+| Prioridad | Dominios | Razón |
+|---|---|---|
+| **Alta** | Hogar, familia, finanzas | Sin especialista identificado. Es donde la curaduría genera ventaja |
+| Media | Salud, mascotas | Hay alternativas, pero ninguna consolidada ni claramente local |
+| **Baja** | Vehículo | Cubierto por R5, gratis y con integración oficial. Es condición de paridad, no diferenciador |
+
+Esa inversión de prioridades es el hallazgo más importante para este catálogo: **el valor no está donde está la multa más cara, sino donde no hay quien avise.**
+
+---
+
+## 7. Trabajo pendiente sobre este catálogo
 
 1. Verificar la fuente normativa de las ocho obligaciones de §3 y registrar el artículo exacto.
 2. Decidir qué tareas de §4 se conservan y cuáles se eliminan por no aportar al criterio de aceptación.
 3. Validar el listado con el trabajo de campo previsto en el objetivo específico 1 (200 encuestas, 10 entrevistas) para saber cuáles se olvidan de verdad.
 4. Completar hasta al menos 40 entradas verificadas, que es la meta comprometida en el alcance.
+5. **Modelar las obligaciones cuyo primer vencimiento depende de una condición**, no solo de un intervalo. La técnico-mecánica es el caso claro: su periodicidad es anual, pero la primera se exige al quinto año en carros particulares y al segundo en motocicletas. Un intervalo fijo de 365 días desde la matrícula produciría un aviso incorrecto durante cuatro años.
+
+---
+
+## 8. Una lección del propio equipo
+
+Durante la formulación de la Entrega 1 el equipo afirmó por escrito, en tres secciones distintas, que la revisión técnico-mecánica se exige desde el segundo año en vehículos particulares. Es falso: eso aplica a motocicletas.
+
+El error se detectó y corrigió, y vale la pena conservarlo aquí por lo que demuestra. **Si un equipo que está construyendo un producto sobre estos plazos se equivoca en uno de los dos más conocidos del país, la premisa del proyecto queda comprobada:** los ciclos de las obligaciones colombianas no son de conocimiento general, y por eso curar este catálogo tiene valor.
+
+También fija un estándar de trabajo: ninguna entrada entra al catálogo sin su norma verificada y su fecha de verificación registrada.

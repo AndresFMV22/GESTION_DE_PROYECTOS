@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1629" height="418.0" viewBox="0 0 1629 418.0" role="img" font-family="Segoe UI, Calibri, Helvetica, Arial, sans-serif">
+<title>Blueprint del servicio</title>
+<rect width="1629" height="418.0" fill="#FFFFFF"/>
+<rect x="172" y="52" width="228" height="40" rx="6" fill="#F4F6F8" stroke="#7C8794" stroke-width="1.5"/>
+<text x="286" y="76" font-size="12.5" font-weight="700" fill="#2B3440" text-anchor="middle">1. Descubrimiento</text>
+<rect x="411" y="52" width="228" height="40" rx="6" fill="#F4F6F8" stroke="#7C8794" stroke-width="1.5"/>
+<text x="525" y="76" font-size="12.5" font-weight="700" fill="#2B3440" text-anchor="middle">2. Registro</text>
+<rect x="650" y="52" width="228" height="40" rx="6" fill="#2B3440" stroke="#2B3440" stroke-width="1.5"/>
+<text x="764" y="76" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">3. Configuración inicial</text>
+<text x="764" y="44" font-size="10.5" font-weight="700" fill="#B8860B" text-anchor="middle" letter-spacing="0.6">★ MOMENTO DE VERDAD</text>
+<rect x="889" y="52" width="228" height="40" rx="6" fill="#2B3440" stroke="#2B3440" stroke-width="1.5"/>
+<text x="1003" y="76" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">4. Uso recurrente</text>
+<text x="1003" y="44" font-size="10.5" font-weight="700" fill="#B8860B" text-anchor="middle" letter-spacing="0.6">★ MOMENTO DE VERDAD</text>
+<rect x="1128" y="52" width="228" height="40" rx="6" fill="#F4F6F8" stroke="#7C8794" stroke-width="1.5"/>
+<text x="1242" y="76" font-size="12.5" font-weight="700" fill="#2B3440" text-anchor="middle">5. Conversión</text>
+<rect x="1367" y="52" width="228" height="40" rx="6" fill="#F4F6F8" stroke="#7C8794" stroke-width="1.5"/>
+<text x="1481" y="76" font-size="12.5" font-weight="700" fill="#2B3440" text-anchor="middle">6. Soporte</text>
+<text x="156" y="127" font-size="11.5" font-weight="700" fill="#3F7391" text-anchor="end" letter-spacing="0.5">ACCIONES</text>
+<text x="156" y="143" font-size="11.5" font-weight="700" fill="#3F7391" text-anchor="end" letter-spacing="0.5">DEL USUARIO</text>
+<rect x="172" y="104" width="228" height="58" rx="7" fill="#E6EEF5" stroke="#3F7391" stroke-width="1.5"/>
+<text x="286" y="137" font-size="11.8" fill="#1D3D52" text-anchor="middle">Encuentra la propuesta de valor</text>
+<rect x="411" y="104" width="228" height="58" rx="7" fill="#E6EEF5" stroke="#3F7391" stroke-width="1.5"/>
+<text x="525" y="129" font-size="11.8" fill="#1D3D52" text-anchor="middle">Crea la cuenta y autoriza el</text>
+<text x="525" y="145" font-size="11.8" fill="#1D3D52" text-anchor="middle">tratamiento de sus datos</text>
+<rect x="650" y="104" width="228" height="58" rx="7" fill="#E6EEF5" stroke="#3F7391" stroke-width="1.5"/>
+<text x="764" y="129" font-size="11.8" fill="#1D3D52" text-anchor="middle">Elige módulos y declara sus fechas</text>
+<text x="764" y="145" font-size="11.8" fill="#1D3D52" text-anchor="middle">base</text>
+<rect x="889" y="104" width="228" height="58" rx="7" fill="#E6EEF5" stroke="#3F7391" stroke-width="1.5"/>
+<text x="1003" y="129" font-size="11.8" fill="#1D3D52" text-anchor="middle">Recibe el aviso y marca la</text>
+<text x="1003" y="145" font-size="11.8" fill="#1D3D52" text-anchor="middle">obligación como cumplida</text>
+<rect x="1128" y="104" width="228" height="58" rx="7" fill="#E6EEF5" stroke="#3F7391" stroke-width="1.5"/>
+<text x="1242" y="137" font-size="11.8" fill="#1D3D52" text-anchor="middle">Activa un módulo de pago</text>
+<rect x="1367" y="104" width="228" height="58" rx="7" fill="#E6EEF5" stroke="#3F7391" stroke-width="1.5"/>
+<text x="1481" y="129" font-size="11.8" fill="#1D3D52" text-anchor="middle">Consulta o ejerce derechos sobre</text>
+<text x="1481" y="145" font-size="11.8" fill="#1D3D52" text-anchor="middle">sus datos</text>
+<text x="156" y="219" font-size="11.5" font-weight="700" fill="#3F7391" text-anchor="end" letter-spacing="0.5">LO QUE EL</text>
+<text x="156" y="235" font-size="11.5" font-weight="700" fill="#3F7391" text-anchor="end" letter-spacing="0.5">USUARIO VE</text>
+<rect x="172" y="196" width="228" height="58" rx="7" fill="#CFDDE9" stroke="#3F7391" stroke-width="1.5"/>
+<text x="286" y="221" font-size="11.8" fill="#1D3D52" text-anchor="middle">Página de inicio con la propuesta</text>
+<text x="286" y="237" font-size="11.8" fill="#1D3D52" text-anchor="middle">de valor</text>
+<rect x="411" y="196" width="228" height="58" rx="7" fill="#CFDDE9" stroke="#3F7391" stroke-width="1.5"/>
+<text x="525" y="221" font-size="11.8" fill="#1D3D52" text-anchor="middle">Formulario de registro y aviso de</text>
+<text x="525" y="237" font-size="11.8" fill="#1D3D52" text-anchor="middle">privacidad</text>
+<rect x="650" y="196" width="228" height="58" rx="7" fill="#CFDDE9" stroke="#3F7391" stroke-width="1.5"/>
+<text x="764" y="221" font-size="11.8" fill="#1D3D52" text-anchor="middle">Catálogo del módulo con sus</text>
+<text x="764" y="237" font-size="11.8" fill="#1D3D52" text-anchor="middle">periodicidades</text>
+<rect x="889" y="196" width="228" height="58" rx="7" fill="#CFDDE9" stroke="#3F7391" stroke-width="1.5"/>
+<text x="1003" y="221" font-size="11.8" fill="#1D3D52" text-anchor="middle">Aviso por correo y panel de</text>
+<text x="1003" y="237" font-size="11.8" fill="#1D3D52" text-anchor="middle">obligaciones próximas</text>
+<rect x="1128" y="196" width="228" height="58" rx="7" fill="#CFDDE9" stroke="#3F7391" stroke-width="1.5"/>
+<text x="1242" y="221" font-size="11.8" fill="#1D3D52" text-anchor="middle">Pasarela de pago en modo de</text>
+<text x="1242" y="237" font-size="11.8" fill="#1D3D52" text-anchor="middle">pruebas</text>
+<rect x="1367" y="196" width="228" height="58" rx="7" fill="#CFDDE9" stroke="#3F7391" stroke-width="1.5"/>
+<text x="1481" y="229" font-size="11.8" fill="#1D3D52" text-anchor="middle">Canal de atención al titular</text>
+<text x="156" y="324" font-size="11.5" font-weight="700" fill="#2B3440" text-anchor="end" letter-spacing="0.5">TRASTIENDA</text>
+<text x="156" y="340" font-size="11.5" font-weight="700" fill="#2B3440" text-anchor="end" letter-spacing="0.5">DEL SISTEMA</text>
+<rect x="172" y="288" width="228" height="84" rx="7" fill="none" stroke="#7C8794" stroke-width="1.2" stroke-dasharray="4 5"/>
+<text x="286" y="334" font-size="11" fill="#7C8794" text-anchor="middle" font-style="italic">sin actividad</text>
+<rect x="411" y="288" width="228" height="84" rx="7" fill="#EDF0F3" stroke="#2B3440" stroke-width="1.5"/>
+<text x="525" y="326" font-size="11.8" fill="#2B3440" text-anchor="middle">Creación del usuario y registro de</text>
+<text x="525" y="342" font-size="11.8" fill="#2B3440" text-anchor="middle">la autorización como evidencia</text>
+<rect x="650" y="288" width="228" height="84" rx="7" fill="#EDF0F3" stroke="#2B3440" stroke-width="1.5"/>
+<text x="764" y="326" font-size="11.8" fill="#2B3440" text-anchor="middle">Instanciación de recordatorios y</text>
+<text x="764" y="342" font-size="11.8" fill="#2B3440" text-anchor="middle">cálculo de fechas de vencimiento</text>
+<rect x="889" y="288" width="228" height="84" rx="7" fill="#EDF0F3" stroke="#2B3440" stroke-width="1.5"/>
+<text x="1003" y="311" font-size="11.8" fill="#2B3440" text-anchor="middle">Evaluación diaria de la ventana de</text>
+<text x="1003" y="326" font-size="11.8" fill="#2B3440" text-anchor="middle">anticipación, envío del aviso,</text>
+<text x="1003" y="342" font-size="11.8" fill="#2B3440" text-anchor="middle">registro del resultado y</text>
+<text x="1003" y="357" font-size="11.8" fill="#2B3440" text-anchor="middle">reprogramación del ciclo</text>
+<rect x="1128" y="288" width="228" height="84" rx="7" fill="#EDF0F3" stroke="#2B3440" stroke-width="1.5"/>
+<text x="1242" y="326" font-size="11.8" fill="#2B3440" text-anchor="middle">Verificación de la suscripción</text>
+<text x="1242" y="342" font-size="11.8" fill="#2B3440" text-anchor="middle">vigente en el servidor</text>
+<rect x="1367" y="288" width="228" height="84" rx="7" fill="#EDF0F3" stroke="#2B3440" stroke-width="1.5"/>
+<text x="1481" y="326" font-size="11.8" fill="#2B3440" text-anchor="middle">Trazabilidad de la solicitud y</text>
+<text x="1481" y="342" font-size="11.8" fill="#2B3440" text-anchor="middle">plazos de respuesta</text>
+<line x1="172" y1="179" x2="1595" y2="179" stroke="#7C8794" stroke-width="1.4" stroke-dasharray="6 5"/>
+<rect x="188" y="170" width="158" height="18" rx="9" fill="#FFFFFF"/>
+<text x="267" y="183" font-size="10.5" font-weight="700" fill="#7C8794" text-anchor="middle" letter-spacing="0.7">LÍNEA DE INTERACCIÓN</text>
+<line x1="172" y1="271" x2="1595" y2="271" stroke="#2B3440" stroke-width="2.4"/>
+<rect x="188" y="262" width="158" height="18" rx="9" fill="#FFFFFF"/>
+<text x="267" y="275" font-size="10.5" font-weight="700" fill="#2B3440" text-anchor="middle" letter-spacing="0.7">LÍNEA DE VISIBILIDAD</text>
+</svg>

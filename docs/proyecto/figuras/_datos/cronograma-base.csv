@@ -1,0 +1,29 @@
+﻿Id;Nombre de tarea;Duración (días);Predecesoras;Responsable;Fase;Inicio (día);Fin (día);Holgura (días);Ruta crítica
+1;Conformación del equipo y definición de roles;2;;Director de proyecto;1. Formulación;0;2;0;Sí
+2;Identificación y validación de la idea de proyecto;3;1;Equipo completo;1. Formulación;2;5;0;Sí
+3;Investigación de estado del arte y fuentes sectoriales;8;2;Analista de mercado;1. Formulación;5;13;0;Sí
+4;Construcción del árbol de problemas y de objetivos;4;2;Director de proyecto;1. Formulación;5;9;6;No
+5;Formulación de objetivos y alcance del proyecto;3;4;Director de proyecto;1. Formulación;9;12;6;No
+6;Análisis PESTEL del entorno colombiano;5;3;Analista de mercado;1. Formulación;13;18;1;No
+7;Análisis de competencia y benchmarking de precios;5;3;Analista de mercado;1. Formulación;13;18;0;Sí
+8;Análisis de proveedores y cotización de servicios cloud;4;3;Líder técnico;1. Formulación;13;17;6;No
+9;Estudio administrativo y legal preliminar;4;6;Analista legal;1. Formulación;18;22;1;No
+10;Ingeniería preliminar del proyecto;5;5,7;Líder técnico;1. Formulación;18;23;0;Sí
+11;Consolidación y entrega del perfil (Entrega 1);3;8,9,10;Equipo completo;1. Formulación;23;26;0;Sí
+12;Diseño del instrumento de encuesta;3;11;Analista de mercado;2. Investigación de mercado;26;29;0;Sí
+13;Aplicación de encuesta a 200 adultos de 25 a 55 años;10;12;Analista de mercado;2. Investigación de mercado;29;39;0;Sí
+14;Entrevistas a profundidad con 10 usuarios potenciales;6;12;Diseñador UX;2. Investigación de mercado;29;35;4;No
+15;Procesamiento y análisis de resultados de campo;5;13,14;Analista de mercado;2. Investigación de mercado;39;44;0;Sí
+16;Definición de propuesta de valor y precio localizado;4;15;Director de proyecto;2. Investigación de mercado;44;48;0;Sí
+17;Diseño UX/UI y prototipo navegable;8;16;Diseñador UX;3. Diseño y desarrollo;48;56;8;No
+18;Validación del prototipo con usuarios;4;17;Diseñador UX;3. Diseño y desarrollo;56;60;8;No
+19;Modelado de base de datos y esquema en Supabase;5;16;Líder técnico;3. Diseño y desarrollo;48;53;0;Sí
+20;Desarrollo del backend y API REST;15;19;Desarrollador backend;3. Diseño y desarrollo;53;68;0;Sí
+21;Desarrollo del frontend web;15;18,20;Desarrollador frontend;3. Diseño y desarrollo;68;83;0;Sí
+22;Desarrollo de la aplicación móvil;12;20;Desarrollador móvil;3. Diseño y desarrollo;68;80;9;No
+23;Implementación del módulo de notificaciones programadas;6;20;Desarrollador backend;3. Diseño y desarrollo;68;74;15;No
+24;Integración de la pasarela de pagos;6;21;Desarrollador backend;3. Diseño y desarrollo;83;89;0;Sí
+25;Pruebas funcionales y de integración;8;21,22,23,24;Líder técnico;4. Pruebas y cumplimiento;89;97;0;Sí
+26;Políticas de tratamiento de datos y registro RNBD ante SIC;6;24;Analista legal;4. Pruebas y cumplimiento;89;95;2;No
+27;Prueba piloto (beta) con usuarios reales;10;25,26;Equipo completo;4. Pruebas y cumplimiento;97;107;0;Sí
+28;Evaluación financiera y consolidación de la Entrega 2;7;27;Director de proyecto;5. Cierre;107;114;0;Sí

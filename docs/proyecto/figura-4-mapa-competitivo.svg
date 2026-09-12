@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="880" viewBox="0 0 1240 880" role="img" font-family="Segoe UI, Calibri, Helvetica, Arial, sans-serif">
+<title>Mapa de posicionamiento competitivo</title>
+<defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6B7580"/></marker></defs>
+<rect width="1240" height="880" fill="#FFFFFF"/>
+<rect x="658.0" y="92.0" width="526.0" height="335.0" fill="#EFF6F1"/>
+<line x1="395.0" y1="762.0" x2="395.0" y2="92.0" stroke="#E8EBEE" stroke-width="1"/>
+<line x1="132.0" y1="594.5" x2="1184.0" y2="594.5" stroke="#E8EBEE" stroke-width="1"/>
+<line x1="658.0" y1="762.0" x2="658.0" y2="92.0" stroke="#E8EBEE" stroke-width="1"/>
+<line x1="132.0" y1="427.0" x2="1184.0" y2="427.0" stroke="#E8EBEE" stroke-width="1"/>
+<line x1="921.0" y1="762.0" x2="921.0" y2="92.0" stroke="#E8EBEE" stroke-width="1"/>
+<line x1="132.0" y1="259.5" x2="1184.0" y2="259.5" stroke="#E8EBEE" stroke-width="1"/>
+<line x1="658.0" y1="762.0" x2="658.0" y2="92.0" stroke="#9AA4AF" stroke-width="1.4" stroke-dasharray="5 4"/>
+<line x1="132.0" y1="427.0" x2="1184.0" y2="427.0" stroke="#9AA4AF" stroke-width="1.4" stroke-dasharray="5 4"/>
+<rect x="132.0" y="92.0" width="1052.0" height="670.0" fill="none" stroke="#9AA4AF" stroke-width="1.6"/>
+<text x="144.0" y="109.4" font-size="13.5" font-weight="700" fill="#6B7580" text-anchor="start" letter-spacing="0.4">VERTICALES COLOMBIANOS</text>
+<text x="144.0" y="128.4" font-size="12" fill="#9AA4AF" text-anchor="start">Profundos pero estrechos:</text>
+<text x="144.0" y="143.4" font-size="12" fill="#9AA4AF" text-anchor="start">cubren un solo dominio</text>
+<text x="670.0" y="122.8" font-size="13.5" font-weight="700" fill="#6B7580" text-anchor="start" letter-spacing="0.4">EL ESPACIO VACÍO</text>
+<text x="670.0" y="141.8" font-size="12" fill="#9AA4AF" text-anchor="start">Cobertura amplia con</text>
+<text x="670.0" y="156.8" font-size="12" fill="#9AA4AF" text-anchor="start">contenido local precargado</text>
+<text x="144.0" y="672.2" font-size="13.5" font-weight="700" fill="#6B7580" text-anchor="start" letter-spacing="0.4">SIN PROPUESTA</text>
+<text x="144.0" y="691.2" font-size="12" fill="#9AA4AF" text-anchor="start">Ni amplitud ni contenido</text>
+<text x="670.0" y="471.2" font-size="13.5" font-weight="700" fill="#6B7580" text-anchor="start" letter-spacing="0.4">GENÉRICOS GLOBALES</text>
+<text x="670.0" y="490.2" font-size="12" fill="#9AA4AF" text-anchor="start">Amplios pero vacíos:</text>
+<text x="670.0" y="505.2" font-size="12" fill="#9AA4AF" text-anchor="start">el usuario aporta el contenido</text>
+<line x1="86.0" y1="762.0" x2="86.0" y2="78.0" stroke="#6B7580" stroke-width="1.8" marker-end="url(#fl)"/>
+<line x1="132.0" y1="814.0" x2="1198.0" y2="814.0" stroke="#6B7580" stroke-width="1.8" marker-end="url(#fl)"/>
+<text transform="translate(70.0,427.0) rotate(-90)" font-size="13.5" font-weight="700" fill="#2B3440" text-anchor="middle" letter-spacing="0.4">PROFUNDIDAD DE CONTENIDO LOCAL</text>
+<text transform="translate(52.0,427.0) rotate(-90)" font-size="11.5" fill="#9AA4AF" text-anchor="middle">Contenedor vacío  →  obligaciones colombianas precargadas</text>
+<text x="658.0" y="840.0" font-size="13.5" font-weight="700" fill="#2B3440" text-anchor="middle" letter-spacing="0.4">AMPLITUD DE COBERTURA</text>
+<text x="658.0" y="859.0" font-size="11.5" fill="#9AA4AF" text-anchor="middle">Un solo dominio  →  las siete áreas de la vida adulta</text>
+<circle cx="721.1" cy="701.7" r="7" fill="#3F7391" stroke="#FFFFFF" stroke-width="2"/>
+<text x="721.1" y="731.7" font-size="12.5" font-weight="600" fill="#3F7391" text-anchor="middle">Google Calendar y Keep</text>
+<circle cx="857.9" cy="621.3" r="7" fill="#3F7391" stroke="#FFFFFF" stroke-width="2"/>
+<text x="857.9" y="601.3" font-size="12.5" font-weight="600" fill="#3F7391" text-anchor="middle">Any.do</text>
+<circle cx="973.6" cy="688.3" r="7" fill="#3F7391" stroke="#FFFFFF" stroke-width="2"/>
+<text x="973.6" y="718.3" font-size="12.5" font-weight="600" fill="#3F7391" text-anchor="middle">TickTick</text>
+<circle cx="1068.3" cy="594.5" r="7" fill="#3F7391" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1068.3" y="574.5" font-size="12.5" font-weight="600" fill="#3F7391" text-anchor="middle">Todoist</text>
+<circle cx="1120.9" cy="721.8" r="7" fill="#3F7391" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1112.9" y="751.8" font-size="12.5" font-weight="600" fill="#3F7391" text-anchor="end">Notion</text>
+<circle cx="279.3" cy="179.1" r="7" fill="#B0544A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="305.3" y="185.1" font-size="12.5" font-weight="600" fill="#B0544A" text-anchor="start">R5</text>
+<circle cx="237.2" cy="306.4" r="7" fill="#B0544A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="263.2" y="312.4" font-size="12.5" font-weight="600" fill="#B0544A" text-anchor="start">AIMEDIC</text>
+<circle cx="331.9" cy="453.8" r="7" fill="#B0544A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="357.9" y="453.8" font-size="12.5" font-weight="600" fill="#B0544A" text-anchor="start">Apps de carnet</text>
+<text x="357.9" y="468.8" font-size="12.5" font-weight="600" fill="#B0544A" text-anchor="start">veterinario</text>
+<circle cx="963.1" cy="199.2" r="19" fill="#2B3440" opacity="0.14"/>
+<circle cx="963.1" cy="199.2" r="10" fill="#2B3440" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="963.1" y="173.2" font-size="15" font-weight="700" fill="#2B3440" text-anchor="middle">ALIVIA</text>
+<circle cx="132.0" cy="42.0" r="6" fill="#3F7391"/>
+<text x="146.0" y="46.0" font-size="12.5" fill="#6B7580">Genéricos globales</text>
+<circle cx="352.0" cy="42.0" r="6" fill="#B0544A"/>
+<text x="366.0" y="46.0" font-size="12.5" fill="#6B7580">Verticales colombianos</text>
+<circle cx="572.0" cy="42.0" r="6" fill="#2B3440"/>
+<text x="586.0" y="46.0" font-size="12.5" fill="#6B7580">Este proyecto</text>
+</svg>

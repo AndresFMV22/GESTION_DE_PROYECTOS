@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1740" height="618.5" viewBox="0 0 1740 618.5" role="img" font-family="Segoe UI, Calibri, Helvetica, Arial, sans-serif">
+<title>Arbol de objetivos</title>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7C8794"/></marker></defs>
+<rect width="1740" height="618.5" fill="#FFFFFF"/>
+<text x="24" y="79.5" font-size="10.5" font-weight="700" fill="#4A8A62" letter-spacing="0.9">FINES INDIRECTOS</text>
+<text x="24" y="194.5" font-size="10.5" font-weight="700" fill="#4A8A62" letter-spacing="0.9">FINES DIRECTOS</text>
+<text x="24" y="308.0" font-size="10.5" font-weight="700" fill="#2B3440" letter-spacing="0.9">OBJETIVO CENTRAL</text>
+<text x="24" y="421.5" font-size="10.5" font-weight="700" fill="#3F7391" letter-spacing="0.9">MEDIOS DIRECTOS</text>
+<text x="24" y="544.8" font-size="10.5" font-weight="700" fill="#3F7391" letter-spacing="0.9">MEDIOS RAÍZ</text>
+<path d="M 272.5 503.0 L 272.5 475.0 L 404.0 475.0 L 404.0 447.0" fill="none" stroke="#7C8794" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M 535.5 503.0 L 535.5 475.0 L 404.0 475.0 L 404.0 447.0" fill="none" stroke="#7C8794" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M 798.5 503.0 L 798.5 475.0 L 930.0 475.0 L 930.0 447.0" fill="none" stroke="#7C8794" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M 1061.5 503.0 L 1061.5 475.0 L 930.0 475.0 L 930.0 447.0" fill="none" stroke="#7C8794" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M 1324.5 503.0 L 1324.5 475.0 L 1456.0 475.0 L 1456.0 447.0" fill="none" stroke="#7C8794" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M 1587.5 503.0 L 1587.5 475.0 L 1456.0 475.0 L 1456.0 447.0" fill="none" stroke="#7C8794" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M 404.0 388.0 L 404.0 360.0 L 456.0 360.0 L 456.0 332.0" fill="none" stroke="#7C8794" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M 930.0 388.0 L 930.0 360.0 L 930.0 360.0 L 930.0 332.0" fill="none" stroke="#7C8794" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M 1456.0 388.0 L 1456.0 360.0 L 1404.0 360.0 L 1404.0 332.0" fill="none" stroke="#7C8794" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M 456.0 276.0 L 456.0 248.0 L 404.0 248.0 L 404.0 220.0" fill="none" stroke="#7C8794" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M 930.0 276.0 L 930.0 248.0 L 930.0 248.0 L 930.0 220.0" fill="none" stroke="#7C8794" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M 1404.0 276.0 L 1404.0 248.0 L 1456.0 248.0 L 1456.0 220.0" fill="none" stroke="#7C8794" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M 404.0 161.0 L 404.0 133.0 L 404.0 133.0 L 404.0 105.0" fill="none" stroke="#7C8794" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M 930.0 161.0 L 930.0 133.0 L 930.0 133.0 L 930.0 105.0" fill="none" stroke="#7C8794" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M 1456.0 161.0 L 1456.0 133.0 L 1456.0 133.0 L 1456.0 105.0" fill="none" stroke="#7C8794" stroke-width="1.6" marker-end="url(#ar)"/>
+<rect x="204.0" y="46.0" width="400.0" height="59.0" rx="7" fill="#E3F1E8" stroke="#4A8A62" stroke-width="1.7"/>
+<text x="404.0" y="79.9" font-size="12.5" font-weight="400" fill="#1E5136" text-anchor="middle">Ahorro económico por multas, recargos e intereses evitados</text>
+<rect x="730.0" y="46.0" width="400.0" height="59.0" rx="7" fill="#E3F1E8" stroke="#4A8A62" stroke-width="1.7"/>
+<text x="930.0" y="79.9" font-size="12.5" font-weight="400" fill="#1E5136" text-anchor="middle">Relaciones familiares y laborales menos tensionadas</text>
+<rect x="1256.0" y="46.0" width="400.0" height="59.0" rx="7" fill="#E3F1E8" stroke="#4A8A62" stroke-width="1.7"/>
+<text x="1456.0" y="79.9" font-size="12.5" font-weight="400" fill="#1E5136" text-anchor="middle">Mejor salud mental: menor estrés y ansiedad</text>
+<rect x="204.0" y="161.0" width="400.0" height="59.0" rx="7" fill="#C9E4D4" stroke="#4A8A62" stroke-width="1.7"/>
+<text x="404.0" y="186.6" font-size="12.5" font-weight="400" fill="#1E5136" text-anchor="middle">Cumplimiento puntual de obligaciones legales y tributarias,</text>
+<text x="404.0" y="203.1" font-size="12.5" font-weight="400" fill="#1E5136" text-anchor="middle">y acceso a descuentos por pronto pago</text>
+<rect x="730.0" y="161.0" width="400.0" height="59.0" rx="7" fill="#C9E4D4" stroke="#4A8A62" stroke-width="1.7"/>
+<text x="930.0" y="194.9" font-size="12.5" font-weight="400" fill="#1E5136" text-anchor="middle">Cumplimiento de compromisos familiares y laborales</text>
+<rect x="1256.0" y="161.0" width="400.0" height="59.0" rx="7" fill="#C9E4D4" stroke="#4A8A62" stroke-width="1.7"/>
+<text x="1456.0" y="194.9" font-size="12.5" font-weight="400" fill="#1E5136" text-anchor="middle">Rutina diaria organizada y con menor tensión</text>
+<rect x="430.0" y="276.0" width="1000.0" height="56.0" rx="7" fill="#2B3440" stroke="#2B3440" stroke-width="1.7"/>
+<text x="930.0" y="309.4" font-size="15.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Los adultos entre 25 y 55 años residentes en Colombia recuerdan y cumplen a tiempo sus obligaciones recurrentes</text>
+<rect x="204.0" y="388.0" width="400.0" height="59.0" rx="7" fill="#CFDDE9" stroke="#3F7391" stroke-width="1.7"/>
+<text x="404.0" y="413.6" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">Reducción de la carga cognitiva mediante delegación en un</text>
+<text x="404.0" y="430.1" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">sistema externo</text>
+<rect x="730.0" y="388.0" width="400.0" height="59.0" rx="7" fill="#CFDDE9" stroke="#3F7391" stroke-width="1.7"/>
+<text x="930.0" y="421.9" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">Centralización de la información en una sola plataforma</text>
+<rect x="1256.0" y="388.0" width="400.0" height="59.0" rx="7" fill="#CFDDE9" stroke="#3F7391" stroke-width="1.7"/>
+<text x="1456.0" y="413.6" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">Conocimiento de los ciclos de vencimiento incorporado en el</text>
+<text x="1456.0" y="430.1" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">sistema</text>
+<rect x="150.0" y="503.0" width="245.0" height="75.5" rx="7" fill="#E6EEF5" stroke="#3F7391" stroke-width="1.7"/>
+<text x="272.5" y="536.9" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">Cobertura de todas las áreas de</text>
+<text x="272.5" y="553.4" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">vida en módulos diferenciados</text>
+<rect x="413.0" y="503.0" width="245.0" height="75.5" rx="7" fill="#E6EEF5" stroke="#3F7391" stroke-width="1.7"/>
+<text x="535.5" y="536.9" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">Aviso automático que sustituye a la</text>
+<text x="535.5" y="553.4" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">memoria como mecanismo de control</text>
+<rect x="676.0" y="503.0" width="245.0" height="75.5" rx="7" fill="#E6EEF5" stroke="#3F7391" stroke-width="1.7"/>
+<text x="798.5" y="528.6" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">Punto único de consulta que</text>
+<text x="798.5" y="545.1" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">reemplaza notas y aplicaciones</text>
+<text x="798.5" y="561.6" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">dispersas</text>
+<rect x="939.0" y="503.0" width="245.0" height="75.5" rx="7" fill="#E6EEF5" stroke="#3F7391" stroke-width="1.7"/>
+<text x="1061.5" y="536.9" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">Diseño adaptado a la normatividad y</text>
+<text x="1061.5" y="553.4" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">a los plazos colombianos</text>
+<rect x="1202.0" y="503.0" width="245.0" height="75.5" rx="7" fill="#E6EEF5" stroke="#3F7391" stroke-width="1.7"/>
+<text x="1324.5" y="528.6" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">Catálogo curado de obligaciones con</text>
+<text x="1324.5" y="545.1" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">su periodicidad y su fuente</text>
+<text x="1324.5" y="561.6" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">normativa</text>
+<rect x="1465.0" y="503.0" width="245.0" height="75.5" rx="7" fill="#E6EEF5" stroke="#3F7391" stroke-width="1.7"/>
+<text x="1587.5" y="536.9" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">Priorización explícita por</text>
+<text x="1587.5" y="553.4" font-size="12.5" font-weight="400" fill="#1D3D52" text-anchor="middle">consecuencia legal o económica</text>
+</svg>

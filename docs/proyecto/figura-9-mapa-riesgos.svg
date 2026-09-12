@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1142" height="662" viewBox="0 0 1142 662" role="img" font-family="Segoe UI, Calibri, Helvetica, Arial, sans-serif">
+<title>Mapa de riesgos</title>
+<rect width="1142" height="662" fill="#FFFFFF"/>
+<text x="254" y="82" font-size="12" font-weight="700" fill="#2B3440" text-anchor="middle" letter-spacing="0.5">BAJO</text>
+<text x="498" y="82" font-size="12" font-weight="700" fill="#2B3440" text-anchor="middle" letter-spacing="0.5">MEDIO</text>
+<text x="742" y="82" font-size="12" font-weight="700" fill="#2B3440" text-anchor="middle" letter-spacing="0.5">ALTO</text>
+<text x="986" y="82" font-size="12" font-weight="700" fill="#2B3440" text-anchor="middle" letter-spacing="0.5">MUY ALTO</text>
+<text x="620" y="574" font-size="12.5" font-weight="700" fill="#2B3440" text-anchor="middle" letter-spacing="0.6">IMPACTO</text>
+<text transform="translate(38,317) rotate(-90)" font-size="12.5" font-weight="700" fill="#2B3440" text-anchor="middle" letter-spacing="0.6">PROBABILIDAD</text>
+<text x="114" y="179" font-size="12" font-weight="700" fill="#2B3440" text-anchor="end" letter-spacing="0.5">ALTA</text>
+<rect x="132" y="104" width="244" height="142" fill="#FBF0D9" stroke="#FFFFFF" stroke-width="3"/>
+<text x="142" y="122" font-size="9.5" font-weight="700" fill="#B8860B" opacity="0.7" letter-spacing="0.5">MEDIO</text>
+<rect x="376" y="104" width="244" height="142" fill="#F8E1D8" stroke="#FFFFFF" stroke-width="3"/>
+<text x="386" y="122" font-size="9.5" font-weight="700" fill="#C4703F" opacity="0.7" letter-spacing="0.5">ALTO</text>
+<rect x="388" y="154" width="220" height="44" rx="8" fill="#FFFFFF" stroke="#C4703F" stroke-width="1.7"/>
+<circle cx="407" cy="176" r="13" fill="#C4703F"/>
+<text x="407" y="181" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<text x="426" y="173" font-size="9.6" fill="#7A3E17">Retraso del cronograma por</text>
+<text x="426" y="185" font-size="9.6" fill="#7A3E17">dedicación parcial</text>
+<rect x="620" y="104" width="244" height="142" fill="#F2D3CE" stroke="#FFFFFF" stroke-width="3"/>
+<text x="630" y="122" font-size="9.5" font-weight="700" fill="#B0544A" opacity="0.7" letter-spacing="0.5">CRÍTICO</text>
+<rect x="632" y="128" width="220" height="44" rx="8" fill="#FFFFFF" stroke="#B0544A" stroke-width="1.7"/>
+<circle cx="651" cy="150" r="13" fill="#B0544A"/>
+<text x="651" y="155" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="670" y="142" font-size="9.6" fill="#6E2A22">Precio no competitivo o</text>
+<text x="670" y="153" font-size="9.6" fill="#6E2A22">disposición a pagar</text>
+<text x="670" y="164" font-size="9.6" fill="#6E2A22">insuficiente</text>
+<rect x="632" y="180" width="220" height="44" rx="8" fill="#FFFFFF" stroke="#B0544A" stroke-width="1.7"/>
+<circle cx="651" cy="202" r="13" fill="#B0544A"/>
+<text x="651" y="207" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="670" y="199" font-size="9.6" fill="#6E2A22">Un vertical colombiano amplía</text>
+<text x="670" y="211" font-size="9.6" fill="#6E2A22">su cobertura</text>
+<rect x="864" y="104" width="244" height="142" fill="#F2D3CE" stroke="#FFFFFF" stroke-width="3"/>
+<text x="874" y="122" font-size="9.5" font-weight="700" fill="#B0544A" opacity="0.7" letter-spacing="0.5">CRÍTICO</text>
+<text x="114" y="321" font-size="12" font-weight="700" fill="#2B3440" text-anchor="end" letter-spacing="0.5">MEDIA</text>
+<rect x="132" y="246" width="244" height="142" fill="#E9F2EC" stroke="#FFFFFF" stroke-width="3"/>
+<text x="142" y="264" font-size="9.5" font-weight="700" fill="#4A8A62" opacity="0.7" letter-spacing="0.5">BAJO</text>
+<rect x="144" y="296" width="220" height="44" rx="8" fill="#FFFFFF" stroke="#4A8A62" stroke-width="1.7"/>
+<circle cx="163" cy="318" r="13" fill="#4A8A62"/>
+<text x="163" y="323" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">9</text>
+<text x="182" y="321" font-size="9.6" fill="#1E5136">Variación de la tasa de cambio</text>
+<rect x="376" y="246" width="244" height="142" fill="#FBF0D9" stroke="#FFFFFF" stroke-width="3"/>
+<text x="386" y="264" font-size="9.5" font-weight="700" fill="#B8860B" opacity="0.7" letter-spacing="0.5">MEDIO</text>
+<rect x="388" y="270" width="220" height="44" rx="8" fill="#FFFFFF" stroke="#B8860B" stroke-width="1.7"/>
+<circle cx="407" cy="292" r="13" fill="#B8860B"/>
+<text x="407" y="297" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">7</text>
+<text x="426" y="289" font-size="9.6" fill="#6B4E05">Dependencia de un solo</text>
+<text x="426" y="301" font-size="9.6" fill="#6B4E05">proveedor extranjero</text>
+<rect x="388" y="322" width="220" height="44" rx="8" fill="#FFFFFF" stroke="#B8860B" stroke-width="1.7"/>
+<circle cx="407" cy="344" r="13" fill="#B8860B"/>
+<text x="407" y="349" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">8</text>
+<text x="426" y="341" font-size="9.6" fill="#6B4E05">Desactualización del catálogo</text>
+<text x="426" y="353" font-size="9.6" fill="#6B4E05">ante cambios normativos</text>
+<rect x="620" y="246" width="244" height="142" fill="#F8E1D8" stroke="#FFFFFF" stroke-width="3"/>
+<text x="630" y="264" font-size="9.5" font-weight="700" fill="#C4703F" opacity="0.7" letter-spacing="0.5">ALTO</text>
+<rect x="632" y="296" width="220" height="44" rx="8" fill="#FFFFFF" stroke="#C4703F" stroke-width="1.7"/>
+<circle cx="651" cy="318" r="13" fill="#C4703F"/>
+<text x="651" y="323" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="670" y="315" font-size="9.6" fill="#7A3E17">Baja adopción o abandono en el</text>
+<text x="670" y="327" font-size="9.6" fill="#7A3E17">piloto</text>
+<rect x="864" y="246" width="244" height="142" fill="#F2D3CE" stroke="#FFFFFF" stroke-width="3"/>
+<text x="874" y="264" font-size="9.5" font-weight="700" fill="#B0544A" opacity="0.7" letter-spacing="0.5">CRÍTICO</text>
+<text x="114" y="463" font-size="12" font-weight="700" fill="#2B3440" text-anchor="end" letter-spacing="0.5">BAJA</text>
+<rect x="132" y="388" width="244" height="142" fill="#E9F2EC" stroke="#FFFFFF" stroke-width="3"/>
+<text x="142" y="406" font-size="9.5" font-weight="700" fill="#4A8A62" opacity="0.7" letter-spacing="0.5">BAJO</text>
+<rect x="376" y="388" width="244" height="142" fill="#E9F2EC" stroke="#FFFFFF" stroke-width="3"/>
+<text x="386" y="406" font-size="9.5" font-weight="700" fill="#4A8A62" opacity="0.7" letter-spacing="0.5">BAJO</text>
+<rect x="620" y="388" width="244" height="142" fill="#FBF0D9" stroke="#FFFFFF" stroke-width="3"/>
+<text x="630" y="406" font-size="9.5" font-weight="700" fill="#B8860B" opacity="0.7" letter-spacing="0.5">MEDIO</text>
+<rect x="632" y="438" width="220" height="44" rx="8" fill="#FFFFFF" stroke="#B8860B" stroke-width="1.7"/>
+<circle cx="651" cy="460" r="13" fill="#B8860B"/>
+<text x="651" y="465" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+<text x="670" y="457" font-size="9.6" fill="#6B4E05">Un competidor global incorpora</text>
+<text x="670" y="469" font-size="9.6" fill="#6B4E05">plantillas locales</text>
+<rect x="864" y="388" width="244" height="142" fill="#F2D3CE" stroke="#FFFFFF" stroke-width="3"/>
+<text x="874" y="406" font-size="9.5" font-weight="700" fill="#B0544A" opacity="0.7" letter-spacing="0.5">CRÍTICO</text>
+<rect x="876" y="438" width="220" height="44" rx="8" fill="#FFFFFF" stroke="#B0544A" stroke-width="1.7"/>
+<circle cx="895" cy="460" r="13" fill="#B0544A"/>
+<text x="895" y="465" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="914" y="457" font-size="9.6" fill="#6E2A22">Fuga o tratamiento indebido de</text>
+<text x="914" y="469" font-size="9.6" fill="#6E2A22">datos personales</text>
+<rect x="132" y="597" width="22" height="14" rx="3" fill="#E9F2EC" stroke="#4A8A62" stroke-width="1.6"/>
+<text x="161" y="608" font-size="10.8" fill="#7C8794">Bajo</text>
+<rect x="282" y="597" width="22" height="14" rx="3" fill="#FBF0D9" stroke="#B8860B" stroke-width="1.6"/>
+<text x="311" y="608" font-size="10.8" fill="#7C8794">Medio</text>
+<rect x="432" y="597" width="22" height="14" rx="3" fill="#F8E1D8" stroke="#C4703F" stroke-width="1.6"/>
+<text x="461" y="608" font-size="10.8" fill="#7C8794">Alto</text>
+<rect x="582" y="597" width="22" height="14" rx="3" fill="#F2D3CE" stroke="#B0544A" stroke-width="1.6"/>
+<text x="611" y="608" font-size="10.8" fill="#7C8794">Crítico</text>
+<text x="1108" y="608" font-size="10.5" fill="#7C8794" text-anchor="end">Impacto muy alto escala a Crítico · en lo demás, probabilidad × impacto</text>
+</svg>
